@@ -1,0 +1,1710 @@
+{
+    "item": [
+        {
+            "id": "dac48a6e-6bef-4052-bc35-7e833aead6b7",
+            "name": "kadasternatuurlijkpersonen",
+            "item": [
+                {
+                    "id": "0c223d34-8eeb-4e7b-854f-f1c9622cddcc",
+                    "name": "Get Kadaster Personen",
+                    "request": {
+                        "name": "Get Kadaster Personen",
+                        "description": {
+                            "content": "Het zoeken van bij het kadaster geregistreerde natuurlijke personen die niet in de basisregistratie personen (BRP) zijn ingeschreven (of wel zijn ingeschreven maar niet zijn _gematched_ bij het inschrijven van de akte). Kadasternatuurlijkpersonen worden niet geactualiseerd. ",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "kadasternatuurlijkpersonen"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [
+                                {
+                                    "description": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.0.0/features/fields.feature)",
+                                    "key": "fields",
+                                    "value": "<string>"
+                                },
+                                {
+                                    "description": "(Required) Free query parameter. Dit endpoint evolueert naar free query zoeken. In deze versie kan alleen een combinatie van (het begin van) de geslachtsnaam en geboortedatum [YYYY-mm-dd] worden opgegeven.",
+                                    "key": "q",
+                                    "value": "<string>"
+                                }
+                            ],
+                            "variable": []
+                        },
+                        "method": "GET",
+                        "auth": {}
+                    },
+                    "response": [
+                        {
+                            "id": "e37bcc1f-6836-486f-a3ab-30b3d20e8a73",
+                            "name": "Zoekactie geslaagd",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternatuurlijkpersonen"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "q",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "warning",
+                                    "value": "299 https://service.../api/.../v1 \"Deze versie van de API is verouderd en zal uit dienst worden genomen op 2018-02-01. Raadpleeg voor meer informatie hier de documentatie: https://omgevingswet.../api/.../v1\".",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/hal+json"
+                                }
+                            ],
+                            "body": "{\n \"_links\": {\n  \"self\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\"\n  }\n },\n \"_embedded\": {\n  \"kadasterNatuurlijkPersonen\": [\n   {\n    \"identificatie\": \"<string>\",\n    \"omschrijving\": \"<string>\",\n    \"domein\": \"<string>\",\n    \"indicatieNietToonbareDiakriet\": \"<boolean>\",\n    \"beschikkingsbevoegdheid\": {\n     \"code\": \"<string>\",\n     \"waarde\": \"<string>\"\n    },\n    \"woonadres\": {\n     \"nummeraanduidingIdentificatie\": \"1234207890123456\",\n     \"huisnummer\": 26,\n     \"huisletter\": \"A\",\n     \"huisnummertoevoeging\": \"3\",\n     \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n     \"postcode\": \"1234AA\",\n     \"woonplaats\": \"Nootdorp\",\n     \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n     \"adresregel2\": \"1234AA Nootdorp\"\n    },\n    \"postadres\": {\n     \"nummeraanduidingIdentificatie\": \"<string>\",\n     \"huisnummer\": \"<integer>\",\n     \"huisletter\": \"A\",\n     \"huisnummertoevoeging\": \"3\",\n     \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n     \"postcode\": \"1234AA\",\n     \"woonplaats\": \"Nootdorp\",\n     \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n     \"adresregel2\": \"1234AA Nootdorp\",\n     \"adresregel3\": \"Selangor\",\n     \"land\": {\n      \"code\": \"<string>\",\n      \"waarde\": \"<string>\"\n     },\n     \"postbusnummer\": \"<integer>\"\n    },\n    \"kadastraalOnroerendeZaakIdentificaties\": [\n     \"<string>\",\n     \"<string>\"\n    ],\n    \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n    \"landWaarnaarVertrokken\": {\n     \"code\": \"<string>\",\n     \"waarde\": \"<string>\"\n    },\n    \"geslachtsaanduiding\": \"<string>\",\n    \"heeftPartnerschap\": [\n     {\n      \"datumOntbinding\": {\n       \"dag\": 3,\n       \"datum\": {},\n       \"jaar\": 1989,\n       \"maand\": 5\n      },\n      \"datumSluiting\": {\n       \"dag\": 3,\n       \"datum\": {},\n       \"jaar\": 1989,\n       \"maand\": 5\n      },\n      \"naam\": {\n       \"geslachtsnaam\": \"<string>\",\n       \"voornamen\": \"<string>\",\n       \"voorvoegsel\": \"<string>\"\n      }\n     },\n     {\n      \"datumOntbinding\": {\n       \"dag\": 3,\n       \"datum\": {},\n       \"jaar\": 1989,\n       \"maand\": 5\n      },\n      \"datumSluiting\": {\n       \"dag\": 3,\n       \"datum\": {},\n       \"jaar\": 1989,\n       \"maand\": 5\n      },\n      \"naam\": {\n       \"geslachtsnaam\": \"<string>\",\n       \"voornamen\": \"<string>\",\n       \"voorvoegsel\": \"<string>\"\n      }\n     }\n    ],\n    \"naam\": {\n     \"geslachtsnaam\": \"<string>\",\n     \"voornamen\": \"<string>\",\n     \"voorvoegsel\": \"<string>\"\n    },\n    \"geboorte\": {\n     \"plaats\": \"<string>\",\n     \"datum\": {\n      \"dag\": 3,\n      \"datum\": {},\n      \"jaar\": 1989,\n      \"maand\": 5\n     },\n     \"land\": {\n      \"code\": \"<string>\",\n      \"waarde\": \"<string>\"\n     }\n    },\n    \"overlijden\": {\n     \"datum\": {\n      \"dag\": 3,\n      \"datum\": {},\n      \"jaar\": 1989,\n      \"maand\": 5\n     }\n    },\n    \"_links\": {\n     \"self\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"woonadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"postadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"kadastraalOnroerendeZaken\": [\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      },\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      }\n     ],\n     \"zakelijkGerechtigden\": [\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      },\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      }\n     ]\n    }\n   },\n   {\n    \"identificatie\": \"<string>\",\n    \"omschrijving\": \"<string>\",\n    \"domein\": \"<string>\",\n    \"indicatieNietToonbareDiakriet\": \"<boolean>\",\n    \"beschikkingsbevoegdheid\": {\n     \"code\": \"<string>\",\n     \"waarde\": \"<string>\"\n    },\n    \"woonadres\": {\n     \"nummeraanduidingIdentificatie\": \"1234207890123456\",\n     \"huisnummer\": 26,\n     \"huisletter\": \"A\",\n     \"huisnummertoevoeging\": \"3\",\n     \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n     \"postcode\": \"1234AA\",\n     \"woonplaats\": \"Nootdorp\",\n     \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n     \"adresregel2\": \"1234AA Nootdorp\"\n    },\n    \"postadres\": {\n     \"nummeraanduidingIdentificatie\": \"<string>\",\n     \"huisnummer\": \"<integer>\",\n     \"huisletter\": \"A\",\n     \"huisnummertoevoeging\": \"3\",\n     \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n     \"postcode\": \"1234AA\",\n     \"woonplaats\": \"Nootdorp\",\n     \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n     \"adresregel2\": \"1234AA Nootdorp\",\n     \"adresregel3\": \"Selangor\",\n     \"land\": {\n      \"code\": \"<string>\",\n      \"waarde\": \"<string>\"\n     },\n     \"postbusnummer\": \"<integer>\"\n    },\n    \"kadastraalOnroerendeZaakIdentificaties\": [\n     \"<string>\",\n     \"<string>\"\n    ],\n    \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n    \"landWaarnaarVertrokken\": {\n     \"code\": \"<string>\",\n     \"waarde\": \"<string>\"\n    },\n    \"geslachtsaanduiding\": \"<string>\",\n    \"heeftPartnerschap\": [\n     {\n      \"datumOntbinding\": {\n       \"dag\": 3,\n       \"datum\": {},\n       \"jaar\": 1989,\n       \"maand\": 5\n      },\n      \"datumSluiting\": {\n       \"dag\": 3,\n       \"datum\": {},\n       \"jaar\": 1989,\n       \"maand\": 5\n      },\n      \"naam\": {\n       \"geslachtsnaam\": \"<string>\",\n       \"voornamen\": \"<string>\",\n       \"voorvoegsel\": \"<string>\"\n      }\n     },\n     {\n      \"datumOntbinding\": {\n       \"dag\": 3,\n       \"datum\": {},\n       \"jaar\": 1989,\n       \"maand\": 5\n      },\n      \"datumSluiting\": {\n       \"dag\": 3,\n       \"datum\": {},\n       \"jaar\": 1989,\n       \"maand\": 5\n      },\n      \"naam\": {\n       \"geslachtsnaam\": \"<string>\",\n       \"voornamen\": \"<string>\",\n       \"voorvoegsel\": \"<string>\"\n      }\n     }\n    ],\n    \"naam\": {\n     \"geslachtsnaam\": \"<string>\",\n     \"voornamen\": \"<string>\",\n     \"voorvoegsel\": \"<string>\"\n    },\n    \"geboorte\": {\n     \"plaats\": \"<string>\",\n     \"datum\": {\n      \"dag\": 3,\n      \"datum\": {},\n      \"jaar\": 1989,\n      \"maand\": 5\n     },\n     \"land\": {\n      \"code\": \"<string>\",\n      \"waarde\": \"<string>\"\n     }\n    },\n    \"overlijden\": {\n     \"datum\": {\n      \"dag\": 3,\n      \"datum\": {},\n      \"jaar\": 1989,\n      \"maand\": 5\n     }\n    },\n    \"_links\": {\n     \"self\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"woonadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"postadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"kadastraalOnroerendeZaken\": [\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      },\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      }\n     ],\n     \"zakelijkGerechtigden\": [\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      },\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      }\n     ]\n    }\n   }\n  ]\n }\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "c43ca122-7835-499c-a17a-2e550a5d9a8b",
+                            "name": "Bad Request",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternatuurlijkpersonen"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "q",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Bad Request",
+                            "code": 400,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.1 400 Bad Request\",\n \"title\": \"Ten minste één parameter moet worden opgegeven.\",\n \"status\": 400,\n \"detail\": \"The request could not be understood by the server due to malformed syntax. The client SHOULD NOT repeat the request without modification.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"paramsRequired\",\n \"invalidParams\": [\n  {\n   \"type\": \"https://www.vng.nl/realisatie/api/validaties/integer\",\n   \"name\": \"verblijfplaats__huisnummer\",\n   \"code\": \"integer\",\n   \"reason\": \"Waarde is geen geldige integer.\"\n  }\n ]\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "315e0ea4-cb96-4d0c-b121-aa47da8615b1",
+                            "name": "Unauthorized",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternatuurlijkpersonen"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "q",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Unauthorized",
+                            "code": 401,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.2 401 Unauthorized\",\n \"title\": \"Niet correct geauthenticeerd.\",\n \"status\": 401,\n \"detail\": \"The request requires user authentication. The response MUST include a WWW-Authenticate header field (section 14.47) containing a challenge applicable to the requested resource.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"authentication\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "fc70f2b5-7eff-4a9a-a6b7-517860e4c860",
+                            "name": "Forbidden",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternatuurlijkpersonen"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "q",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Forbidden",
+                            "code": 403,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.4 403 Forbidden\",\n \"title\": \"U bent niet geautoriseerd voor deze operatie.\",\n \"status\": 403,\n \"detail\": \"The server understood the request, but is refusing to fulfill it.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"autorisation\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "3292beb2-ed87-4d17-8571-daf4e391e6a7",
+                            "name": "Not Acceptable",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternatuurlijkpersonen"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "q",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Not Acceptable",
+                            "code": 406,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.7 406 Not Acceptable\",\n \"title\": \"Gevraagde contenttype wordt niet ondersteund.\",\n \"status\": 406,\n \"detail\": \"The resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to thr accept headers sent in the request\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"notAcceptable\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "7c4af8b1-60cc-4995-b609-bdc2b7909132",
+                            "name": "Gone",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternatuurlijkpersonen"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "q",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Gone",
+                            "code": 410,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.11 410 Gone\",\n \"title\": \"Gone\",\n \"status\": 410,\n \"detail\": \"The request could not be completed due to a conflict with the current state of the resource\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"gone\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "cfc8f3cd-459a-4813-a887-b27ac31225da",
+                            "name": "Internal Server Error",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternatuurlijkpersonen"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "q",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.5.1 500 Internal server error\",\n \"title\": \"Interne server fout.\",\n \"status\": 500,\n \"detail\": \"The server encountered an unexpected condition which prevented it from fulfilling the request.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"serverError\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "5ec4bbd8-77aa-4dc6-b63f-13a0559738e4",
+                            "name": "Service Unavailable",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternatuurlijkpersonen"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "q",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Service Unavailable",
+                            "code": 503,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.5.4 503 Service Unavailable\",\n \"title\": \"Bronservice {bron} is tijdelijk niet beschikbaar.\",\n \"status\": 503,\n \"detail\": \"The service is currently unable to handle the request due to a temporary overloading or maintenance of the server.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"notAvailable\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": []
+                },
+                {
+                    "id": "a7ec52ee-deca-4c64-b167-d2e29fa50f4b",
+                    "name": "Get Kadaster Persoon",
+                    "request": {
+                        "name": "Get Kadaster Persoon",
+                        "description": {
+                            "content": "Het raadplegen van een bij het kadaster geregistreerde natuurlijke persoon die niet in de basisregistratie personen (BRP) is ingeschreven (of wel is ingeschreven maar niet is gekoppeld bij het inschrijven van de akte). Kadasternatuurlijkpersonen worden niet geactualiseerd.",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "kadasternatuurlijkpersonen",
+                                ":kadasternatuurlijkpersoonidentificatie"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [
+                                {
+                                    "description": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.0.0/features/fields.feature)",
+                                    "key": "fields",
+                                    "value": "<string>"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "description": "(Required) ",
+                                    "type": "any",
+                                    "value": "<string>",
+                                    "key": "kadasternatuurlijkpersoonidentificatie"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "auth": {}
+                    },
+                    "response": [
+                        {
+                            "id": "84d85258-6682-4e10-aea4-4771da9eab88",
+                            "name": "Zoekactie geslaagd",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternatuurlijkpersonen",
+                                        ":kadasternatuurlijkpersoonidentificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "kadasternatuurlijkpersoonidentificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "warning",
+                                    "value": "299 https://service.../api/.../v1 \"Deze versie van de API is verouderd en zal uit dienst worden genomen op 2018-02-01. Raadpleeg voor meer informatie hier de documentatie: https://omgevingswet.../api/.../v1\".",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/hal+json"
+                                }
+                            ],
+                            "body": "{\n \"identificatie\": \"<string>\",\n \"omschrijving\": \"<string>\",\n \"domein\": \"<string>\",\n \"indicatieNietToonbareDiakriet\": \"<boolean>\",\n \"beschikkingsbevoegdheid\": {\n  \"code\": \"<string>\",\n  \"waarde\": \"<string>\"\n },\n \"woonadres\": {\n  \"nummeraanduidingIdentificatie\": \"1234207890123456\",\n  \"huisnummer\": 26,\n  \"huisletter\": \"A\",\n  \"huisnummertoevoeging\": \"3\",\n  \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n  \"postcode\": \"1234AA\",\n  \"woonplaats\": \"Nootdorp\",\n  \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n  \"adresregel2\": \"1234AA Nootdorp\"\n },\n \"postadres\": {\n  \"nummeraanduidingIdentificatie\": \"<string>\",\n  \"huisnummer\": \"<integer>\",\n  \"huisletter\": \"A\",\n  \"huisnummertoevoeging\": \"3\",\n  \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n  \"postcode\": \"1234AA\",\n  \"woonplaats\": \"Nootdorp\",\n  \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n  \"adresregel2\": \"1234AA Nootdorp\",\n  \"adresregel3\": \"Selangor\",\n  \"land\": {\n   \"code\": \"<string>\",\n   \"waarde\": \"<string>\"\n  },\n  \"postbusnummer\": \"<integer>\"\n },\n \"kadastraalOnroerendeZaakIdentificaties\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n \"landWaarnaarVertrokken\": {\n  \"code\": \"<string>\",\n  \"waarde\": \"<string>\"\n },\n \"geslachtsaanduiding\": \"<string>\",\n \"heeftPartnerschap\": [\n  {\n   \"datumOntbinding\": {\n    \"dag\": 3,\n    \"datum\": {},\n    \"jaar\": 1989,\n    \"maand\": 5\n   },\n   \"datumSluiting\": {\n    \"dag\": 3,\n    \"datum\": {},\n    \"jaar\": 1989,\n    \"maand\": 5\n   },\n   \"naam\": {\n    \"geslachtsnaam\": \"<string>\",\n    \"voornamen\": \"<string>\",\n    \"voorvoegsel\": \"<string>\"\n   }\n  },\n  {\n   \"datumOntbinding\": {\n    \"dag\": 3,\n    \"datum\": {},\n    \"jaar\": 1989,\n    \"maand\": 5\n   },\n   \"datumSluiting\": {\n    \"dag\": 3,\n    \"datum\": {},\n    \"jaar\": 1989,\n    \"maand\": 5\n   },\n   \"naam\": {\n    \"geslachtsnaam\": \"<string>\",\n    \"voornamen\": \"<string>\",\n    \"voorvoegsel\": \"<string>\"\n   }\n  }\n ],\n \"naam\": {\n  \"geslachtsnaam\": \"<string>\",\n  \"voornamen\": \"<string>\",\n  \"voorvoegsel\": \"<string>\"\n },\n \"geboorte\": {\n  \"plaats\": \"<string>\",\n  \"datum\": {\n   \"dag\": 3,\n   \"datum\": {},\n   \"jaar\": 1989,\n   \"maand\": 5\n  },\n  \"land\": {\n   \"code\": \"<string>\",\n   \"waarde\": \"<string>\"\n  }\n },\n \"overlijden\": {\n  \"datum\": {\n   \"dag\": 3,\n   \"datum\": {},\n   \"jaar\": 1989,\n   \"maand\": 5\n  }\n },\n \"_links\": {\n  \"self\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\"\n  },\n  \"woonadres\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\"\n  },\n  \"postadres\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\"\n  },\n  \"kadastraalOnroerendeZaken\": [\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\"\n   },\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\"\n   }\n  ],\n  \"zakelijkGerechtigden\": [\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\"\n   },\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\"\n   }\n  ]\n }\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "9626c2f8-134c-484a-9dc8-b0fe0fe24c4f",
+                            "name": "Bad Request",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternatuurlijkpersonen",
+                                        ":kadasternatuurlijkpersoonidentificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "kadasternatuurlijkpersoonidentificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Bad Request",
+                            "code": 400,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.1 400 Bad Request\",\n \"title\": \"Ten minste één parameter moet worden opgegeven.\",\n \"status\": 400,\n \"detail\": \"The request could not be understood by the server due to malformed syntax. The client SHOULD NOT repeat the request without modification.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"paramsRequired\",\n \"invalidParams\": [\n  {\n   \"type\": \"https://www.vng.nl/realisatie/api/validaties/integer\",\n   \"name\": \"verblijfplaats__huisnummer\",\n   \"code\": \"integer\",\n   \"reason\": \"Waarde is geen geldige integer.\"\n  }\n ]\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "0164641c-bec6-48e0-84c6-9416e300e966",
+                            "name": "Unauthorized",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternatuurlijkpersonen",
+                                        ":kadasternatuurlijkpersoonidentificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "kadasternatuurlijkpersoonidentificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Unauthorized",
+                            "code": 401,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.2 401 Unauthorized\",\n \"title\": \"Niet correct geauthenticeerd.\",\n \"status\": 401,\n \"detail\": \"The request requires user authentication. The response MUST include a WWW-Authenticate header field (section 14.47) containing a challenge applicable to the requested resource.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"authentication\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "a6062942-d5f9-462f-a1f4-a74dda5abe77",
+                            "name": "Forbidden",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternatuurlijkpersonen",
+                                        ":kadasternatuurlijkpersoonidentificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "kadasternatuurlijkpersoonidentificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Forbidden",
+                            "code": 403,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.4 403 Forbidden\",\n \"title\": \"U bent niet geautoriseerd voor deze operatie.\",\n \"status\": 403,\n \"detail\": \"The server understood the request, but is refusing to fulfill it.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"autorisation\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "abe838f3-ba99-4972-9eea-0f1aa82782b9",
+                            "name": "Not Found",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternatuurlijkpersonen",
+                                        ":kadasternatuurlijkpersoonidentificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "kadasternatuurlijkpersoonidentificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Not Found",
+                            "code": 404,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.5 404 Not Found\",\n \"title\": \"Opgevraagde resource bestaat niet.\",\n \"status\": 404,\n \"detail\": \"The server has not found anything matching the Request-URI.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"notFound\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "eab7e359-bff1-493f-a789-30cbbba3bfea",
+                            "name": "Not Acceptable",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternatuurlijkpersonen",
+                                        ":kadasternatuurlijkpersoonidentificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "kadasternatuurlijkpersoonidentificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Not Acceptable",
+                            "code": 406,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.7 406 Not Acceptable\",\n \"title\": \"Gevraagde contenttype wordt niet ondersteund.\",\n \"status\": 406,\n \"detail\": \"The resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to thr accept headers sent in the request\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"notAcceptable\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "77f86a4e-6ef0-4e25-a436-d6e156a25a81",
+                            "name": "Gone",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternatuurlijkpersonen",
+                                        ":kadasternatuurlijkpersoonidentificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "kadasternatuurlijkpersoonidentificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Gone",
+                            "code": 410,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.11 410 Gone\",\n \"title\": \"Gone\",\n \"status\": 410,\n \"detail\": \"The request could not be completed due to a conflict with the current state of the resource\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"gone\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "798d1860-47e9-4574-8cbd-2dbce5619825",
+                            "name": "Internal Server Error",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternatuurlijkpersonen",
+                                        ":kadasternatuurlijkpersoonidentificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "kadasternatuurlijkpersoonidentificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.5.1 500 Internal server error\",\n \"title\": \"Interne server fout.\",\n \"status\": 500,\n \"detail\": \"The server encountered an unexpected condition which prevented it from fulfilling the request.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"serverError\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "4881195f-88c2-428a-bddf-88ffdf6abbcc",
+                            "name": "Service Unavailable",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternatuurlijkpersonen",
+                                        ":kadasternatuurlijkpersoonidentificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "kadasternatuurlijkpersoonidentificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Service Unavailable",
+                            "code": 503,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.5.4 503 Service Unavailable\",\n \"title\": \"Bronservice {bron} is tijdelijk niet beschikbaar.\",\n \"status\": 503,\n \"detail\": \"The service is currently unable to handle the request due to a temporary overloading or maintenance of the server.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"notAvailable\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": []
+                }
+            ],
+            "event": []
+        },
+        {
+            "id": "ab446ac9-52dc-43e5-9cfe-c440bb91a0b0",
+            "name": "kadasternietnatuurlijkpersonen",
+            "item": [
+                {
+                    "id": "658f6ef0-9a27-40eb-b13e-c0987d071049",
+                    "name": "Get Kadaster Niet Natuurlijk Personen",
+                    "request": {
+                        "name": "Get Kadaster Niet Natuurlijk Personen",
+                        "description": {
+                            "content": "Het zoeken van bij het kadaster geregistreerde niet natuurlijke personen die al dan niet in het handelsregister (HR) zijn ingeschreven. Kadasternietnatuurlijkpersonen worden niet geactualiseerd.",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "kadasternietnatuurlijkpersonen"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [
+                                {
+                                    "description": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.0.0/features/fields.feature)",
+                                    "key": "fields",
+                                    "value": "<string>"
+                                },
+                                {
+                                    "description": "(Required) Free query parameter. Dit endpoint evolueert naar free query zoeken. In deze versie kan alleen een combinatie van (het begin van de) de statutaire naam en zetel (vestigingsplaats) worden opgegeven. Let op! Een niet natuurlijk persoon kan meerdere keren, en op meer dan één manier voorkomen in de BRK.",
+                                    "key": "q",
+                                    "value": "<string>"
+                                }
+                            ],
+                            "variable": []
+                        },
+                        "method": "GET",
+                        "auth": {}
+                    },
+                    "response": [
+                        {
+                            "id": "f7f55523-684a-4a93-8d42-b3f574107cda",
+                            "name": "Zoekactie geslaagd",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternietnatuurlijkpersonen"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "q",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "warning",
+                                    "value": "299 https://service.../api/.../v1 \"Deze versie van de API is verouderd en zal uit dienst worden genomen op 2018-02-01. Raadpleeg voor meer informatie hier de documentatie: https://omgevingswet.../api/.../v1\".",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/hal+json"
+                                }
+                            ],
+                            "body": "{\n \"_links\": {\n  \"self\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\"\n  }\n },\n \"_embedded\": {\n  \"kadasterNietNatuurlijkPersonen\": [\n   {\n    \"identificatie\": \"<string>\",\n    \"omschrijving\": \"<string>\",\n    \"domein\": \"<string>\",\n    \"indicatieNietToonbareDiakriet\": \"<boolean>\",\n    \"beschikkingsbevoegdheid\": {\n     \"code\": \"<string>\",\n     \"waarde\": \"<string>\"\n    },\n    \"woonadres\": {\n     \"nummeraanduidingIdentificatie\": \"1234207890123456\",\n     \"huisnummer\": 26,\n     \"huisletter\": \"A\",\n     \"huisnummertoevoeging\": \"3\",\n     \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n     \"postcode\": \"1234AA\",\n     \"woonplaats\": \"Nootdorp\",\n     \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n     \"adresregel2\": \"1234AA Nootdorp\"\n    },\n    \"postadres\": {\n     \"nummeraanduidingIdentificatie\": \"<string>\",\n     \"huisnummer\": \"<integer>\",\n     \"huisletter\": \"A\",\n     \"huisnummertoevoeging\": \"3\",\n     \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n     \"postcode\": \"1234AA\",\n     \"woonplaats\": \"Nootdorp\",\n     \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n     \"adresregel2\": \"1234AA Nootdorp\",\n     \"adresregel3\": \"Selangor\",\n     \"land\": {\n      \"code\": \"<string>\",\n      \"waarde\": \"<string>\"\n     },\n     \"postbusnummer\": \"<integer>\"\n    },\n    \"kadastraalOnroerendeZaakIdentificaties\": [\n     \"<string>\",\n     \"<string>\"\n    ],\n    \"statutaireNaam\": \"<string>\",\n    \"statutaireZetel\": \"<string>\",\n    \"rechtsvorm\": {\n     \"code\": \"<string>\",\n     \"waarde\": \"<string>\"\n    },\n    \"kvkNummer\": \"<string>\",\n    \"rsin\": \"<string>\",\n    \"_links\": {\n     \"self\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"woonadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"postadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"kadastraalOnroerendeZaken\": [\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      },\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      }\n     ],\n     \"zakelijkGerechtigden\": [\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      },\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      }\n     ]\n    }\n   },\n   {\n    \"identificatie\": \"<string>\",\n    \"omschrijving\": \"<string>\",\n    \"domein\": \"<string>\",\n    \"indicatieNietToonbareDiakriet\": \"<boolean>\",\n    \"beschikkingsbevoegdheid\": {\n     \"code\": \"<string>\",\n     \"waarde\": \"<string>\"\n    },\n    \"woonadres\": {\n     \"nummeraanduidingIdentificatie\": \"1234207890123456\",\n     \"huisnummer\": 26,\n     \"huisletter\": \"A\",\n     \"huisnummertoevoeging\": \"3\",\n     \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n     \"postcode\": \"1234AA\",\n     \"woonplaats\": \"Nootdorp\",\n     \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n     \"adresregel2\": \"1234AA Nootdorp\"\n    },\n    \"postadres\": {\n     \"nummeraanduidingIdentificatie\": \"<string>\",\n     \"huisnummer\": \"<integer>\",\n     \"huisletter\": \"A\",\n     \"huisnummertoevoeging\": \"3\",\n     \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n     \"postcode\": \"1234AA\",\n     \"woonplaats\": \"Nootdorp\",\n     \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n     \"adresregel2\": \"1234AA Nootdorp\",\n     \"adresregel3\": \"Selangor\",\n     \"land\": {\n      \"code\": \"<string>\",\n      \"waarde\": \"<string>\"\n     },\n     \"postbusnummer\": \"<integer>\"\n    },\n    \"kadastraalOnroerendeZaakIdentificaties\": [\n     \"<string>\",\n     \"<string>\"\n    ],\n    \"statutaireNaam\": \"<string>\",\n    \"statutaireZetel\": \"<string>\",\n    \"rechtsvorm\": {\n     \"code\": \"<string>\",\n     \"waarde\": \"<string>\"\n    },\n    \"kvkNummer\": \"<string>\",\n    \"rsin\": \"<string>\",\n    \"_links\": {\n     \"self\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"woonadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"postadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"kadastraalOnroerendeZaken\": [\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      },\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      }\n     ],\n     \"zakelijkGerechtigden\": [\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      },\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      }\n     ]\n    }\n   }\n  ]\n }\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "a1d4dae3-2766-43ea-9e82-3dbc14497409",
+                            "name": "Bad Request",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternietnatuurlijkpersonen"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "q",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Bad Request",
+                            "code": 400,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.1 400 Bad Request\",\n \"title\": \"Ten minste één parameter moet worden opgegeven.\",\n \"status\": 400,\n \"detail\": \"The request could not be understood by the server due to malformed syntax. The client SHOULD NOT repeat the request without modification.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"paramsRequired\",\n \"invalidParams\": [\n  {\n   \"type\": \"https://www.vng.nl/realisatie/api/validaties/integer\",\n   \"name\": \"verblijfplaats__huisnummer\",\n   \"code\": \"integer\",\n   \"reason\": \"Waarde is geen geldige integer.\"\n  }\n ]\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "97c7e719-4524-481c-a50e-9642ea54950f",
+                            "name": "Unauthorized",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternietnatuurlijkpersonen"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "q",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Unauthorized",
+                            "code": 401,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.2 401 Unauthorized\",\n \"title\": \"Niet correct geauthenticeerd.\",\n \"status\": 401,\n \"detail\": \"The request requires user authentication. The response MUST include a WWW-Authenticate header field (section 14.47) containing a challenge applicable to the requested resource.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"authentication\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "93d2495d-fac0-44ba-b74c-59a7bc790833",
+                            "name": "Forbidden",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternietnatuurlijkpersonen"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "q",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Forbidden",
+                            "code": 403,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.4 403 Forbidden\",\n \"title\": \"U bent niet geautoriseerd voor deze operatie.\",\n \"status\": 403,\n \"detail\": \"The server understood the request, but is refusing to fulfill it.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"autorisation\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "33714e00-f9bb-42f9-a220-01a4c88543bf",
+                            "name": "Not Acceptable",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternietnatuurlijkpersonen"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "q",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Not Acceptable",
+                            "code": 406,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.7 406 Not Acceptable\",\n \"title\": \"Gevraagde contenttype wordt niet ondersteund.\",\n \"status\": 406,\n \"detail\": \"The resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to thr accept headers sent in the request\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"notAcceptable\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "443f944b-3dca-454d-af51-caab774a1c5c",
+                            "name": "Gone",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternietnatuurlijkpersonen"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "q",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Gone",
+                            "code": 410,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.11 410 Gone\",\n \"title\": \"Gone\",\n \"status\": 410,\n \"detail\": \"The request could not be completed due to a conflict with the current state of the resource\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"gone\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "6f808798-9f7f-43de-b938-17b5b54bf8cd",
+                            "name": "Internal Server Error",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternietnatuurlijkpersonen"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "q",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.5.1 500 Internal server error\",\n \"title\": \"Interne server fout.\",\n \"status\": 500,\n \"detail\": \"The server encountered an unexpected condition which prevented it from fulfilling the request.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"serverError\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "ae0e46b3-8c1a-4999-bfbc-368ad38a0b98",
+                            "name": "Service Unavailable",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternietnatuurlijkpersonen"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        },
+                                        {
+                                            "key": "q",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": []
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Service Unavailable",
+                            "code": 503,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.5.4 503 Service Unavailable\",\n \"title\": \"Bronservice {bron} is tijdelijk niet beschikbaar.\",\n \"status\": 503,\n \"detail\": \"The service is currently unable to handle the request due to a temporary overloading or maintenance of the server.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"notAvailable\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": []
+                },
+                {
+                    "id": "43664769-c6cc-4a16-904a-1fc8201c6895",
+                    "name": "Get Kadaster Niet Natuurlijk Persoon",
+                    "request": {
+                        "name": "Get Kadaster Niet Natuurlijk Persoon",
+                        "description": {
+                            "content": "Het raadplegen van een bij het kadaster geregistreerde niet natuurlijke persoon die al dan niet in het handelsregister (HR) is ingeschreven. Kadasternietnatuurlijkpersonen worden niet geactualiseerd.",
+                            "type": "text/plain"
+                        },
+                        "url": {
+                            "path": [
+                                "kadasternietnatuurlijkpersonen",
+                                ":kadasternietnatuurlijkpersoonidentificatie"
+                            ],
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "query": [
+                                {
+                                    "description": "Hiermee kun je de inhoud van de resource naar behoefte aanpassen door een door komma's gescheiden lijst van property namen op te geven. Bij opgave van niet-bestaande properties wordt een 400 Bad Request teruggegeven. Wanneer de fields parameter niet is opgegeven, worden alle properties met een waarde teruggegeven. Zie [functionele specificaties](https://github.com/VNG-Realisatie/Haal-Centraal-common/blob/v1.0.0/features/fields.feature)",
+                                    "key": "fields",
+                                    "value": "<string>"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "description": "(Required) ",
+                                    "type": "any",
+                                    "value": "<string>",
+                                    "key": "kadasternietnatuurlijkpersoonidentificatie"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "auth": {}
+                    },
+                    "response": [
+                        {
+                            "id": "ab08c842-443b-45be-9d45-1b4f87853835",
+                            "name": "Zoekactie geslaagd",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternietnatuurlijkpersonen",
+                                        ":kadasternietnatuurlijkpersoonidentificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "kadasternietnatuurlijkpersoonidentificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "warning",
+                                    "value": "299 https://service.../api/.../v1 \"Deze versie van de API is verouderd en zal uit dienst worden genomen op 2018-02-01. Raadpleeg voor meer informatie hier de documentatie: https://omgevingswet.../api/.../v1\".",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/hal+json"
+                                }
+                            ],
+                            "body": "{\n \"identificatie\": \"<string>\",\n \"omschrijving\": \"<string>\",\n \"domein\": \"<string>\",\n \"indicatieNietToonbareDiakriet\": \"<boolean>\",\n \"beschikkingsbevoegdheid\": {\n  \"code\": \"<string>\",\n  \"waarde\": \"<string>\"\n },\n \"woonadres\": {\n  \"nummeraanduidingIdentificatie\": \"1234207890123456\",\n  \"huisnummer\": 26,\n  \"huisletter\": \"A\",\n  \"huisnummertoevoeging\": \"3\",\n  \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n  \"postcode\": \"1234AA\",\n  \"woonplaats\": \"Nootdorp\",\n  \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n  \"adresregel2\": \"1234AA Nootdorp\"\n },\n \"postadres\": {\n  \"nummeraanduidingIdentificatie\": \"<string>\",\n  \"huisnummer\": \"<integer>\",\n  \"huisletter\": \"A\",\n  \"huisnummertoevoeging\": \"3\",\n  \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n  \"postcode\": \"1234AA\",\n  \"woonplaats\": \"Nootdorp\",\n  \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n  \"adresregel2\": \"1234AA Nootdorp\",\n  \"adresregel3\": \"Selangor\",\n  \"land\": {\n   \"code\": \"<string>\",\n   \"waarde\": \"<string>\"\n  },\n  \"postbusnummer\": \"<integer>\"\n },\n \"kadastraalOnroerendeZaakIdentificaties\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"statutaireNaam\": \"<string>\",\n \"statutaireZetel\": \"<string>\",\n \"rechtsvorm\": {\n  \"code\": \"<string>\",\n  \"waarde\": \"<string>\"\n },\n \"kvkNummer\": \"<string>\",\n \"rsin\": \"<string>\",\n \"_links\": {\n  \"self\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\"\n  },\n  \"woonadres\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\"\n  },\n  \"postadres\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\"\n  },\n  \"kadastraalOnroerendeZaken\": [\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\"\n   },\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\"\n   }\n  ],\n  \"zakelijkGerechtigden\": [\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\"\n   },\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\"\n   }\n  ]\n }\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "4227eba1-8bec-4f78-af78-caa2fdf51c7c",
+                            "name": "Bad Request",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternietnatuurlijkpersonen",
+                                        ":kadasternietnatuurlijkpersoonidentificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "kadasternietnatuurlijkpersoonidentificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Bad Request",
+                            "code": 400,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.1 400 Bad Request\",\n \"title\": \"Ten minste één parameter moet worden opgegeven.\",\n \"status\": 400,\n \"detail\": \"The request could not be understood by the server due to malformed syntax. The client SHOULD NOT repeat the request without modification.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"paramsRequired\",\n \"invalidParams\": [\n  {\n   \"type\": \"https://www.vng.nl/realisatie/api/validaties/integer\",\n   \"name\": \"verblijfplaats__huisnummer\",\n   \"code\": \"integer\",\n   \"reason\": \"Waarde is geen geldige integer.\"\n  }\n ]\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "7ef7543b-97e7-45d2-8214-16cd87fc6fc7",
+                            "name": "Unauthorized",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternietnatuurlijkpersonen",
+                                        ":kadasternietnatuurlijkpersoonidentificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "kadasternietnatuurlijkpersoonidentificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Unauthorized",
+                            "code": 401,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.2 401 Unauthorized\",\n \"title\": \"Niet correct geauthenticeerd.\",\n \"status\": 401,\n \"detail\": \"The request requires user authentication. The response MUST include a WWW-Authenticate header field (section 14.47) containing a challenge applicable to the requested resource.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"authentication\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "27afdd72-6fc1-4d1f-8202-7c28cc71032f",
+                            "name": "Forbidden",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternietnatuurlijkpersonen",
+                                        ":kadasternietnatuurlijkpersoonidentificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "kadasternietnatuurlijkpersoonidentificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Forbidden",
+                            "code": 403,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.4 403 Forbidden\",\n \"title\": \"U bent niet geautoriseerd voor deze operatie.\",\n \"status\": 403,\n \"detail\": \"The server understood the request, but is refusing to fulfill it.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"autorisation\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "c660cf38-2a82-4063-804a-1624da0febc4",
+                            "name": "Not Found",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternietnatuurlijkpersonen",
+                                        ":kadasternietnatuurlijkpersoonidentificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "kadasternietnatuurlijkpersoonidentificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Not Found",
+                            "code": 404,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.5 404 Not Found\",\n \"title\": \"Opgevraagde resource bestaat niet.\",\n \"status\": 404,\n \"detail\": \"The server has not found anything matching the Request-URI.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"notFound\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "fc482fda-a557-4dc4-b772-f0fda7266a3a",
+                            "name": "Not Acceptable",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternietnatuurlijkpersonen",
+                                        ":kadasternietnatuurlijkpersoonidentificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "kadasternietnatuurlijkpersoonidentificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Not Acceptable",
+                            "code": 406,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.7 406 Not Acceptable\",\n \"title\": \"Gevraagde contenttype wordt niet ondersteund.\",\n \"status\": 406,\n \"detail\": \"The resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to thr accept headers sent in the request\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"notAcceptable\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "0bc691cf-6de0-4c9f-805e-785b4514fd82",
+                            "name": "Gone",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternietnatuurlijkpersonen",
+                                        ":kadasternietnatuurlijkpersoonidentificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "kadasternietnatuurlijkpersoonidentificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Gone",
+                            "code": 410,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.4.11 410 Gone\",\n \"title\": \"Gone\",\n \"status\": 410,\n \"detail\": \"The request could not be completed due to a conflict with the current state of the resource\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"gone\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "83f1585c-271a-4cd3-9a82-eea5390d6255",
+                            "name": "Internal Server Error",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternietnatuurlijkpersonen",
+                                        ":kadasternietnatuurlijkpersoonidentificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "kadasternietnatuurlijkpersoonidentificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Internal Server Error",
+                            "code": 500,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.5.1 500 Internal server error\",\n \"title\": \"Interne server fout.\",\n \"status\": 500,\n \"detail\": \"The server encountered an unexpected condition which prevented it from fulfilling the request.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"serverError\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        },
+                        {
+                            "id": "c7d5ff08-508e-4f48-8c67-973962cd4e72",
+                            "name": "Service Unavailable",
+                            "originalRequest": {
+                                "url": {
+                                    "path": [
+                                        "kadasternietnatuurlijkpersonen",
+                                        ":kadasternietnatuurlijkpersoonidentificatie"
+                                    ],
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "fields",
+                                            "value": "<string>"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "type": "any",
+                                            "key": "kadasternietnatuurlijkpersoonidentificatie"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "body": {}
+                            },
+                            "status": "Service Unavailable",
+                            "code": 503,
+                            "header": [
+                                {
+                                    "key": "api-version",
+                                    "value": "1.0.0",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/problem+json"
+                                }
+                            ],
+                            "body": "{\n \"type\": \"https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#/10.5.4 503 Service Unavailable\",\n \"title\": \"Bronservice {bron} is tijdelijk niet beschikbaar.\",\n \"status\": 503,\n \"detail\": \"The service is currently unable to handle the request due to a temporary overloading or maintenance of the server.\",\n \"instance\": \"https://datapunt.voorbeeldgemeente.nl/api/v1/resourcenaam?parameter=waarde\",\n \"code\": \"notAvailable\"\n}",
+                            "cookie": [],
+                            "_postman_previewlanguage": "json"
+                        }
+                    ],
+                    "event": []
+                }
+            ],
+            "event": []
+        }
+    ],
+    "event": [],
+    "variable": [
+        {
+            "id": "baseUrl",
+            "type": "string",
+            "value": "https://virtserver.swaggerhub.com/VNG-sandbox/Kadasterpersonen-bevragen/1.0.0"
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    },
+    "info": {
+        "_postman_id": "0dea736f-6d35-494d-8d58-bc48f308be09",
+        "name": "Kadaster - BRK-Kadasterpersonen-Bevragen API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": {
+            "content": "D.m.v. deze toepassing worden meerdere, korte bevragingen op de Basis Registratie Kadaster beschikbaar gesteld. Deze toepassing betreft het verstrekken van informatie over bij het Kadaster geregistreerde natuurlijk personen en niet-natuurlijk personen.\n\nContact Support:\n Name: Kadaster Haal Centraal BRK-Bevragen",
+            "type": "text/plain"
+        }
+    }
+}

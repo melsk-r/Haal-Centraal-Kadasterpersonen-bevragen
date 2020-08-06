@@ -1,0 +1,485 @@
+openapi: 3.0.0
+servers:
+# Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/VNG-sandbox/Kadasterpersonen-bevragen/1.0.0
+  - description: "BRK-Bevragen API - TEST (via API-key)"
+    url: https://api.brk.kadaster.nl/esd-eto-apikey/bevragen/v1
+  - description: "BRK-Bevragen API - TEST (via API-key & mTLS)"
+    url: https://api.brk.kadaster.nl/esd-eto/bevragen/v1
+  - description: "BRK-Bevragen API - PRODUCTIE"
+    url: https://api.brk.kadaster.nl/esd/bevragen/v1
+info:
+  title: Kadaster - BRK-Kadasterpersonen-Bevragen API
+  description: "D.m.v. deze toepassing worden meerdere, korte bevragingen op de Basis Registratie Kadaster beschikbaar gesteld. Deze toepassing betreft het verstrekken van informatie over bij het Kadaster geregistreerde natuurlijk personen en niet-natuurlijk personen."
+  version: "1.0.0"
+  contact:
+    name: Kadaster Haal Centraal BRK-Bevragen
+    url: https://github.com/VNG-Realisatie/Haal-Centraal-BRK-Bevragen
+  license:
+    name: European Union Public License, version 1.2 (EUPL-1.2)
+    url: https://eupl.eu/1.2/nl/
+security:
+  - apiKeyAuth: []
+paths:
+  /kadasternatuurlijkpersonen/{kadasternatuurlijkpersoonidentificatie}:
+    get:
+      operationId: GetKadasterPersoon
+      description: "Het raadplegen van een bij het kadaster geregistreerde natuurlijke persoon die niet in de basisregistratie personen (BRP) is ingeschreven (of wel is ingeschreven maar niet is gekoppeld bij het inschrijven van de akte). Kadasternatuurlijkpersonen worden niet geactualiseerd."
+      parameters:
+        - $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/parameters/fields"
+        - in: path
+          name: kadasternatuurlijkpersoonidentificatie
+          description: ""
+          required: true
+          schema:
+            type: string
+            maxLength: 60
+      responses:
+        '200':
+          description: "Zoekactie geslaagd"
+          headers:
+            api-version:
+              $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/headers/api_version"
+            warning:
+              $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/headers/warning"
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/KadasterNatuurlijkPersoonHal'
+        '400':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/400"
+        '401':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/401"
+        '403':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/403"
+        '404':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/404"
+        '406':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/406"
+        '410':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/410"
+        '500':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/500"
+        '503':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/503"
+      tags:
+      - Kadaster Natuurlijk Personen
+  /kadasternietnatuurlijkpersonen/{kadasternietnatuurlijkpersoonidentificatie}:
+    get:
+      operationId: GetKadasterNietNatuurlijkPersoon
+      description: "Het raadplegen van een bij het kadaster geregistreerde niet natuurlijke persoon die al dan niet in het handelsregister (HR) is ingeschreven. Kadasternietnatuurlijkpersonen worden niet geactualiseerd."
+      parameters:
+        - $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/parameters/fields"
+        - in: path
+          name: kadasternietnatuurlijkpersoonidentificatie
+          description: ""
+          required: true
+          schema:
+            type: string
+            maxLength: 60
+      responses:
+        '200':
+          description: "Zoekactie geslaagd"
+          headers:
+            api-version:
+              $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/headers/api_version"
+            warning:
+              $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/headers/warning"
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/KadasterNietNatuurlijkPersoonHal'
+        '400':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/400"
+        '401':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/401"
+        '403':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/403"
+        '404':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/404"
+        '406':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/406"
+        '410':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/410"
+        '500':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/500"
+        '503':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/503"
+      tags:
+      - Kadaster Niet-Natuurlijk Personen
+  /kadasternatuurlijkpersonen:
+    get:
+      operationId: GetKadasterPersonen
+      description: "Het zoeken van bij het kadaster geregistreerde natuurlijke personen die niet in de basisregistratie personen (BRP) zijn ingeschreven (of wel zijn ingeschreven maar niet zijn _gematched_ bij het inschrijven van de akte). Kadasternatuurlijkpersonen worden niet geactualiseerd. "
+      parameters:
+        - $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/parameters/fields"
+        - in: query
+          name: q
+          description: "Free query parameter. Dit endpoint evolueert naar free query zoeken. In deze versie kan alleen een combinatie van (het begin van) de geslachtsnaam en geboortedatum [YYYY-mm-dd] worden opgegeven."
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: "Zoekactie geslaagd"
+          headers:
+            api-version:
+              $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/headers/api_version"
+            warning:
+              $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/headers/warning"
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/KadasterNatuurlijkPersoonHalCollectie'
+        '400':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/400"
+        '401':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/401"
+        '403':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/403"
+        '406':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/406"
+        '410':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/410"
+        '500':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/500"
+        '503':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/503"
+      tags:
+      - Kadaster Natuurlijk Personen
+  /kadasternietnatuurlijkpersonen:
+    get:
+      operationId: GetKadasterNietNatuurlijkPersonen
+      description: "Het zoeken van bij het kadaster geregistreerde niet natuurlijke personen die al dan niet in het handelsregister (HR) zijn ingeschreven. Kadasternietnatuurlijkpersonen worden niet geactualiseerd."
+      parameters:
+        - $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/parameters/fields"
+        - in: query
+          name: q
+          description: "Free query parameter. Dit endpoint evolueert naar free query zoeken. In deze versie kan alleen een combinatie van (het begin van de) de statutaire naam en zetel (vestigingsplaats) worden opgegeven. Let op! Een niet natuurlijk persoon kan meerdere keren, en op meer dan één manier voorkomen in de BRK."
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: "Zoekactie geslaagd"
+          headers:
+            api-version:
+              $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/headers/api_version"
+            warning:
+              $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/headers/warning"
+          content:
+            application/hal+json:
+              schema:
+                $ref: '#/components/schemas/KadasterNietNatuurlijkPersoonHalCollectie'
+        '400':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/400"
+        '401':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/401"
+        '403':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/403"
+        '406':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/406"
+        '410':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/410"
+        '500':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/500"
+        '503':
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/responses/503"
+      tags:
+      - Kadaster Niet-Natuurlijk Personen
+components:
+  securitySchemes:
+    apiKeyAuth:
+      type: apiKey
+      in: header
+      name: X-Api-Key
+      description: "De API-key dient bij elk request via de `X-Api-Key` request header meegestuurd te worden."
+  schemas:
+    Geboorte:
+      type: "object"
+      description: "Geboorte is een groep gegevens over de geboorte van een persoon.
+
+
+      Waardelijst in deze component :
+          [land](http://www.kadaster.nl/schemas/waardelijsten/BRPLand/)"
+      properties:
+        plaats:
+          type: "string"
+          title: "geboorteplaats"
+          description: "De geboorteplaats is de plaats of een plaatsbepaling, die aangeeft waar de persoon is geboren"
+        datum:
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/schemas/Datum_onvolledig"
+        land:
+          $ref: "#/components/schemas/Waardelijst"
+          description: "Mogelijke waarden zijn te vinden in deze [Waardelijst](http://www.kadaster.nl/schemas/waardelijsten/BRPLand/)"
+    Geslacht_enum:
+      type: "string"
+      description: "Een aanduiding die aangeeft dat de ingeschrevene een man of een\
+        \ vrouw is, of dat het geslacht (nog) onbekend is:\n* `man` - Man\n* `vrouw` - Vrouw\n\
+        * `onbekend` - Onbekend"
+      enum:
+      - "man"
+      - "vrouw"
+      - "onbekend"
+    HeeftPartnerschap:
+      type: "object"
+      description: "Partnerschap is een groep gegevens over de huwelijkse- of partnerschapstatus\
+        \ van een persoon."
+      properties:
+        datumOntbinding:
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/schemas/Datum_onvolledig"
+        datumSluiting:
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/schemas/Datum_onvolledig"
+        naam:
+          $ref: "#/components/schemas/Naam"
+    KadasterNatuurlijkPersoon:
+      allOf:
+      - $ref: "#/components/schemas/KadasterPersoon"
+      - description: "Een bij het kadaster geregistreerde natuurlijke persoon die niet in de basisregistratie personen (BRP) is ingeschreven. Kadasternatuurlijkpersonen worden niet geactualiseerd.
+
+
+        Waardelijst in deze component :
+          [beschikkingsbevoegdheid](http://www.kadaster.nl/schemas/waardelijsten/Beschikkingsbevoegdheid/) en [landWaarnaarVertrokken](http://www.kadaster.nl/schemas/waardelijsten/BRPLand/)"
+        properties:
+          geheimhoudingPersoonsgegevens:
+            type: "boolean"
+            title: "indicatieGeheim"
+            description: "Aanduiding die aangeeft dat gegevens\
+              \ van een persoon wel of niet verstrekt mogen worden."
+          landWaarnaarVertrokken:
+            $ref: "#/components/schemas/Waardelijst"
+            description: "Mogelijke waarden zijn te vinden in deze [Waardelijst](http://www.kadaster.nl/schemas/waardelijsten/BRPLand/)"
+          geslachtsaanduiding:
+            $ref: "#/components/schemas/Geslacht_enum"
+          heeftPartnerschap:
+            type: "array"
+            items:
+              $ref: "#/components/schemas/HeeftPartnerschap"
+          naam:
+            $ref: "#/components/schemas/Naam"
+          geboorte:
+            $ref: "#/components/schemas/Geboorte"
+          overlijden:
+            $ref: "#/components/schemas/Overlijden"
+    KadasterNatuurlijkPersoonHal:
+      allOf:
+      - $ref: "#/components/schemas/KadasterNatuurlijkPersoon"
+      - properties:
+          _links:
+            $ref: "#/components/schemas/KadasterPersoon_links"
+    KadasterNatuurlijkPersoonHalCollectie:
+      type: "object"
+      properties:
+        _links:
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/schemas/HalCollectionLinks"
+        _embedded:
+          $ref: "#/components/schemas/KadasterNatuurlijkPersoonHalCollectie_embedded"
+    KadasterNatuurlijkPersoonHalCollectie_embedded:
+      type: "object"
+      properties:
+        kadasterNatuurlijkPersonen:
+          type: "array"
+          items:
+            $ref: "#/components/schemas/KadasterNatuurlijkPersoonHal"
+    KadasterNietNatuurlijkPersoon:
+      allOf:
+      - $ref: "#/components/schemas/KadasterPersoon"
+      - description: "Een bij het kadaster geregistreerde niet natuurlijke persoon, al dan niet ingeschreven in het handelsregister. Kadasternietnatuurlijkpersonen worden niet geactualiseerd.
+
+
+        Waardelijst in deze component :
+          [beschikkingsbevoegdheid](http://www.kadaster.nl/schemas/waardelijsten/Beschikkingsbevoegdheid/) en [rechtsvorm](http://www.kadaster.nl/schemas/waardelijsten/Rechtsvorm/)"
+        properties:
+          statutaireNaam:
+            type: "string"
+          statutaireZetel:
+            type: "string"
+          rechtsvorm:
+            $ref: "#/components/schemas/Waardelijst"
+            description: "Mogelijke waarden zijn te vinden in deze [Waardelijst](http://www.kadaster.nl/schemas/waardelijsten/Rechtsvorm/)"
+          kvkNummer:
+            type: "string"
+          rsin:
+            type: "string"
+    KadasterNietNatuurlijkPersoonHal:
+      allOf:
+      - $ref: "#/components/schemas/KadasterNietNatuurlijkPersoon"
+      - properties:
+          _links:
+            $ref: "#/components/schemas/KadasterPersoon_links"
+    KadasterNietNatuurlijkPersoonHalCollectie:
+      type: "object"
+      properties:
+        _links:
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/schemas/HalCollectionLinks"
+        _embedded:
+          $ref: "#/components/schemas/KadasterNietNatuurlijkPersoonHalCollectie_embedded"
+    KadasterNietNatuurlijkPersoonHalCollectie_embedded:
+      type: "object"
+      properties:
+        kadasterNietNatuurlijkPersonen:
+          type: "array"
+          items:
+            $ref: "#/components/schemas/KadasterNietNatuurlijkPersoonHal"
+    KadasterPersoon:
+      allOf:
+        - $ref: "#/components/schemas/PersoonBasis"
+        - description: "Een in de basisregistratie kadaster geregistreerde persoon.
+
+
+            Waardelijst in deze component :
+            [beschikkingsbevoegdheid](http://www.kadaster.nl/schemas/waardelijsten/Beschikkingsbevoegdheid/)"
+          properties:
+            domein:
+              type: "string"
+              description: "Het domein waartoe de identificatie behoort."
+            indicatieNietToonbareDiakriet:
+              type: "boolean"
+            beschikkingsbevoegdheid:
+              $ref: "#/components/schemas/Waardelijst"
+              description: "Mogelijke waarden zijn te vinden in deze [Waardelijst](http://www.kadaster.nl/schemas/waardelijsten/Beschikkingsbevoegdheid/)"
+            woonadres:
+              $ref: "#/components/schemas/Adres"
+            postadres:
+              $ref: "#/components/schemas/Postadres"
+            kadastraalOnroerendeZaakIdentificaties:
+              type: "array"
+              items:
+                type: "string"
+    KadasterPersoon_links:
+      type: "object"
+      properties:
+        self:
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/schemas/HalLink"
+        woonadres:
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/schemas/HalLink"
+        postadres:
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/schemas/HalLink"
+        kadastraalOnroerendeZaken:
+          type: array
+          items:
+            $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/schemas/HalLink"
+        zakelijkGerechtigden:
+          type: array
+          items:
+            $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/schemas/HalLink"
+
+
+
+
+    Naam:
+      type: "object"
+      description: "Naam is een groep gegevens met de geslachtsnaam, voorletters en voornamen die men wil gebruiken bij aanschrijving."
+      properties:
+        geslachtsnaam:
+          type: "string"
+          description: "De geslachtsnaam is de (achter)naam waarvan eventuele voorvoegsels en adellijke titel zijn afgesplitst."
+        voornamen:
+          type: "string"
+          description: "De voornamen zijn de verzameling namen die, gescheiden door spaties, aan de geslachtsnaam voorafgaat. Indien aanwezig, wordt het predikaat afgesplitst."
+        voorvoegsel:
+          type: "string"
+          title: "voorvoegselsgeslachtsnaam"
+          description: "Voorvoegselsgeslachtsnaam is het deel van de geslachtsnaam dat, gescheiden door een spatie, vooraf gaat aan de rest van de geslachtsnaam."
+    Adres:
+      description: "Waardelijst in deze component :
+          [land](http://www.kadaster.nl/schemas/waardelijsten/BRPLand/)"
+      properties:
+        nummeraanduidingIdentificatie:
+          type: string
+          description: "identificatie van het adres in het geval dit adres in BAG geregistreerd is."
+        huisnummer:
+          type: "integer"
+          description: "URI https://bag.basisregistraties.overheid.nl/doc/begrip/Huisnummer"
+        huisletter:
+          type: "string"
+          description: "URI https://bag.basisregistraties.overheid.nl/doc/begrip/Huisletter"
+          example: "A"
+        huisnummertoevoeging:
+          type: "string"
+          description: "URI https://bag.basisregistraties.overheid.nl/doc/begrip/Huisnummertoevoeging"
+          example: "3"
+        straat:
+          type: "string"
+          example: "Laan van de landinrichtingscommissie Duiven-Westervoort"
+        postcode:
+          type: "string"
+          example: "1234AA"
+        woonplaats:
+          type: "string"
+          example: "Nootdorp"
+        adresregel1:
+          type: "string"
+          description: "Het eerste deel van een adres is een combinatie van de straat en huisnummer."
+          # example: "1600 Pennsylvania Avenue NW"
+          example: "Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3"
+        adresregel2:
+          type: "string"
+          description: "Het tweede deel van een adres is een combinatie van woonplaats eventueel in combinatie met de postcode"
+          # example: "Washington, DC 20500"
+          example: "1234AA Nootdorp"
+        adresregel3:
+          type: "string"
+          description: "Het derde deel van een adres is optioneel een of meer geografische gebieden van het adres in het buitenland"
+          example: "Selangor"
+        land:
+          $ref: "#/components/schemas/Waardelijst"
+          description: "Mogelijke waarden zijn te vinden in deze [Waardelijst](http://www.kadaster.nl/schemas/waardelijsten/BRPLand/)"
+      example:
+        nummeraanduidingIdentificatie: "1234207890123456"
+        huisnummer: 26
+        huisletter: "A"
+        huisnummertoevoeging: "3"
+        straat: "Laan van de landinrichtingscommissie Duiven-Westervoort"
+        postcode: "1234AA"
+        woonplaats: "Nootdorp"
+        adresregel1: "Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3"
+        adresregel2: "1234AA Nootdorp"
+      # voorbeeld adres buitenland:
+      # example:
+      #  adresregel1: "18.G, Jalan Setia Indah"
+      #  adresregel2: "Seksyen U13, Setia Alam"
+      #  adresregel3: "Shah Alam, Selangor"
+      #  land:
+      #    code: "Maleisië"
+      #    waarde: "7026"
+    Postadres:
+      allOf:
+        - $ref: "#/components/schemas/Adres"
+        - type: "object"
+          properties:
+            postbusnummer:
+              type: "integer"
+          example:
+            postbusnummer: 1021
+            postcode: 1234AA
+            woonplaats: "Nootdorp"
+            adresregel1: "Postbus 1021"
+            adresregel2: "1234AA Nootdorp"
+    Overlijden:
+      type: "object"
+      description: "Overlijden is een groep gegevens over het overlijden van een persoon."
+      properties:
+        datum:
+          $ref: "https://raw.githubusercontent.com/VNG-Realisatie/Haal-Centraal-common/v1.0.0/api-specificatie/common.yaml#/components/schemas/Datum_onvolledig"
+    PersoonBasis:
+      type: "object"
+      description: "Een persoon kan een natuurlijk persoon of een niet-natuurlijk persoon zijn. Kan zowel een ingeschreven persoon (in resp. BRP of KvK) of Kadasterpersoon zijn."
+      properties:
+        identificatie:
+          type: string
+          description: "Unieke identificatie voor de persoon. Voor een Kadasterpersoon is dit de identificatie zoals die door het Kadaster is vastgesteld. Voor een ingeschreven natuurlijk persoon is dit het burgerservicenummer. Voor een ingeschreven niet-natuurlijk persoon is dit het RSIN. Of de waarde in identificatie een burgerservicenummer, een RSIN of een kadasterpersoonidentificatie is kan worden afgeleid uit het type persoon."
+        omschrijving:
+          type: string
+          description: "Voor mensen leesbare, herkenbare en identificerende omschrijving van de persoon (met bijvoorbeeld de naam)."
+    Waardelijst:
+      type: "object"
+      description: "Waardelijst is een samengesteld datatype voor het weergeven van\
+        \ een gegeven binnen een extern beheerde referentielijst. De waardelijsten zijn beschikbaargesteld op [deze locatie](http://www.kadaster.nl/schemas/waardelijsten/)"
+      properties:
+        code:
+          type: "string"
+          minLength: 1
+        waarde:
+          type: "string"
