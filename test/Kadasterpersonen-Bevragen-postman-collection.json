@@ -1,11 +1,11 @@
 {
     "item": [
         {
-            "id": "dac48a6e-6bef-4052-bc35-7e833aead6b7",
+            "id": "02b38b64-89b6-4fa2-9307-14b081104d15",
             "name": "kadasternatuurlijkpersonen",
             "item": [
                 {
-                    "id": "0c223d34-8eeb-4e7b-854f-f1c9622cddcc",
+                    "id": "1d35c012-8313-4788-b8dc-7fd69689b8b7",
                     "name": "Get Kadaster Personen",
                     "request": {
                         "name": "Get Kadaster Personen",
@@ -39,7 +39,7 @@
                     },
                     "response": [
                         {
-                            "id": "e37bcc1f-6836-486f-a3ab-30b3d20e8a73",
+                            "id": "dd5c3088-b3ee-4cbe-a0fa-fc6ffeaa5697",
                             "name": "Zoekactie geslaagd",
                             "originalRequest": {
                                 "url": {
@@ -87,7 +87,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "c43ca122-7835-499c-a17a-2e550a5d9a8b",
+                            "id": "60618038-dd4d-4c95-867b-4b55232f13ba",
                             "name": "Bad Request",
                             "originalRequest": {
                                 "url": {
@@ -130,7 +130,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "315e0ea4-cb96-4d0c-b121-aa47da8615b1",
+                            "id": "d29d8372-3f1d-4266-9e74-8daf7f20d15c",
                             "name": "Unauthorized",
                             "originalRequest": {
                                 "url": {
@@ -173,7 +173,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "fc70f2b5-7eff-4a9a-a6b7-517860e4c860",
+                            "id": "5c532f3c-83a6-437c-a7cd-2f28a90c03aa",
                             "name": "Forbidden",
                             "originalRequest": {
                                 "url": {
@@ -216,7 +216,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "3292beb2-ed87-4d17-8571-daf4e391e6a7",
+                            "id": "b8a2f4b3-61a7-4711-982c-3e0b9b824ffb",
                             "name": "Not Acceptable",
                             "originalRequest": {
                                 "url": {
@@ -259,7 +259,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "7c4af8b1-60cc-4995-b609-bdc2b7909132",
+                            "id": "c64cbfb6-720b-411e-a199-25824aca8c07",
                             "name": "Gone",
                             "originalRequest": {
                                 "url": {
@@ -302,7 +302,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "cfc8f3cd-459a-4813-a887-b27ac31225da",
+                            "id": "1e8cedd3-6768-4dcb-9cb7-68f3c3364ae0",
                             "name": "Internal Server Error",
                             "originalRequest": {
                                 "url": {
@@ -345,7 +345,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "5ec4bbd8-77aa-4dc6-b63f-13a0559738e4",
+                            "id": "420751ad-06cc-40e9-aeb2-dc97947eeda7",
                             "name": "Service Unavailable",
                             "originalRequest": {
                                 "url": {
@@ -391,7 +391,7 @@
                     "event": []
                 },
                 {
-                    "id": "a7ec52ee-deca-4c64-b167-d2e29fa50f4b",
+                    "id": "86bb91c0-0773-4506-aba4-8dffd4d40c76",
                     "name": "Get Kadaster Persoon",
                     "request": {
                         "name": "Get Kadaster Persoon",
@@ -428,7 +428,7 @@
                     },
                     "response": [
                         {
-                            "id": "84d85258-6682-4e10-aea4-4771da9eab88",
+                            "id": "89cc7532-45e4-47e5-bfcd-4d1db4ba4c35",
                             "name": "Zoekactie geslaagd",
                             "originalRequest": {
                                 "url": {
@@ -478,7 +478,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "9626c2f8-134c-484a-9dc8-b0fe0fe24c4f",
+                            "id": "1c8ee7e8-70e0-4159-9e6c-64cc808b1660",
                             "name": "Bad Request",
                             "originalRequest": {
                                 "url": {
@@ -523,7 +523,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "0164641c-bec6-48e0-84c6-9416e300e966",
+                            "id": "65e68e6c-b319-4068-a04c-6aeca5f5e87e",
                             "name": "Unauthorized",
                             "originalRequest": {
                                 "url": {
@@ -568,7 +568,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "a6062942-d5f9-462f-a1f4-a74dda5abe77",
+                            "id": "7172a102-8acc-4f8f-af26-acd7f1d1321a",
                             "name": "Forbidden",
                             "originalRequest": {
                                 "url": {
@@ -613,7 +613,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "abe838f3-ba99-4972-9eea-0f1aa82782b9",
+                            "id": "47ea99dc-9347-4ebc-a783-5c7baeb21aaf",
                             "name": "Not Found",
                             "originalRequest": {
                                 "url": {
@@ -658,7 +658,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "eab7e359-bff1-493f-a789-30cbbba3bfea",
+                            "id": "47cb8477-e9d3-48e5-ba3e-f8b83028757f",
                             "name": "Not Acceptable",
                             "originalRequest": {
                                 "url": {
@@ -703,7 +703,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "77f86a4e-6ef0-4e25-a436-d6e156a25a81",
+                            "id": "1f4b28b5-5741-4069-b1f8-7fc1a429bfcf",
                             "name": "Gone",
                             "originalRequest": {
                                 "url": {
@@ -748,7 +748,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "798d1860-47e9-4574-8cbd-2dbce5619825",
+                            "id": "d077d7c9-debb-4503-82c6-a88561490820",
                             "name": "Internal Server Error",
                             "originalRequest": {
                                 "url": {
@@ -793,7 +793,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "4881195f-88c2-428a-bddf-88ffdf6abbcc",
+                            "id": "1e7f4c68-eb1e-417f-9bc6-1542259e5f72",
                             "name": "Service Unavailable",
                             "originalRequest": {
                                 "url": {
@@ -844,11 +844,11 @@
             "event": []
         },
         {
-            "id": "ab446ac9-52dc-43e5-9cfe-c440bb91a0b0",
+            "id": "82a5f661-1194-46ea-90f2-c9b31a6cb02b",
             "name": "kadasternietnatuurlijkpersonen",
             "item": [
                 {
-                    "id": "658f6ef0-9a27-40eb-b13e-c0987d071049",
+                    "id": "d7ee4111-543b-4a87-ab4d-e96dacf626c5",
                     "name": "Get Kadaster Niet Natuurlijk Personen",
                     "request": {
                         "name": "Get Kadaster Niet Natuurlijk Personen",
@@ -882,7 +882,7 @@
                     },
                     "response": [
                         {
-                            "id": "f7f55523-684a-4a93-8d42-b3f574107cda",
+                            "id": "85ef4f2f-4616-4e7a-b9fe-0dc7203f1b04",
                             "name": "Zoekactie geslaagd",
                             "originalRequest": {
                                 "url": {
@@ -930,7 +930,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "a1d4dae3-2766-43ea-9e82-3dbc14497409",
+                            "id": "5e8a4e68-a001-4f94-a0cd-e006d2a324b8",
                             "name": "Bad Request",
                             "originalRequest": {
                                 "url": {
@@ -973,7 +973,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "97c7e719-4524-481c-a50e-9642ea54950f",
+                            "id": "e3d97701-0ded-49ae-993f-102c834ce597",
                             "name": "Unauthorized",
                             "originalRequest": {
                                 "url": {
@@ -1016,7 +1016,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "93d2495d-fac0-44ba-b74c-59a7bc790833",
+                            "id": "1c8a9822-2a45-4bdb-9fb0-002cf0103e1a",
                             "name": "Forbidden",
                             "originalRequest": {
                                 "url": {
@@ -1059,7 +1059,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "33714e00-f9bb-42f9-a220-01a4c88543bf",
+                            "id": "7554e050-bf64-4ae3-ab56-2dd173e48809",
                             "name": "Not Acceptable",
                             "originalRequest": {
                                 "url": {
@@ -1102,7 +1102,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "443f944b-3dca-454d-af51-caab774a1c5c",
+                            "id": "bdbc54db-7d0f-4553-95c0-718bcca75ea5",
                             "name": "Gone",
                             "originalRequest": {
                                 "url": {
@@ -1145,7 +1145,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "6f808798-9f7f-43de-b938-17b5b54bf8cd",
+                            "id": "dc17bddf-19e9-4797-9d1e-c7ea823460df",
                             "name": "Internal Server Error",
                             "originalRequest": {
                                 "url": {
@@ -1188,7 +1188,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "ae0e46b3-8c1a-4999-bfbc-368ad38a0b98",
+                            "id": "41a636da-7e40-4bfc-a4b7-4d0b5eca5d88",
                             "name": "Service Unavailable",
                             "originalRequest": {
                                 "url": {
@@ -1234,7 +1234,7 @@
                     "event": []
                 },
                 {
-                    "id": "43664769-c6cc-4a16-904a-1fc8201c6895",
+                    "id": "7ac06edf-3cd8-4440-afc7-454ce3dee4a1",
                     "name": "Get Kadaster Niet Natuurlijk Persoon",
                     "request": {
                         "name": "Get Kadaster Niet Natuurlijk Persoon",
@@ -1271,7 +1271,7 @@
                     },
                     "response": [
                         {
-                            "id": "ab08c842-443b-45be-9d45-1b4f87853835",
+                            "id": "31a41eb1-7445-457d-b6f0-6ad5cd69416e",
                             "name": "Zoekactie geslaagd",
                             "originalRequest": {
                                 "url": {
@@ -1321,7 +1321,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "4227eba1-8bec-4f78-af78-caa2fdf51c7c",
+                            "id": "ccb2dcde-0779-411e-9839-9cc74a0203a4",
                             "name": "Bad Request",
                             "originalRequest": {
                                 "url": {
@@ -1366,7 +1366,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "7ef7543b-97e7-45d2-8214-16cd87fc6fc7",
+                            "id": "445ca498-efee-4f2a-9b19-7eb5bb195ae4",
                             "name": "Unauthorized",
                             "originalRequest": {
                                 "url": {
@@ -1411,7 +1411,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "27afdd72-6fc1-4d1f-8202-7c28cc71032f",
+                            "id": "10f4a102-a010-4439-ba30-bab0de0d9135",
                             "name": "Forbidden",
                             "originalRequest": {
                                 "url": {
@@ -1456,7 +1456,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "c660cf38-2a82-4063-804a-1624da0febc4",
+                            "id": "39db2862-5406-454a-9ae8-69775cf1ef21",
                             "name": "Not Found",
                             "originalRequest": {
                                 "url": {
@@ -1501,7 +1501,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "fc482fda-a557-4dc4-b772-f0fda7266a3a",
+                            "id": "0d4a42b2-d055-4a10-ab11-31547c3a8079",
                             "name": "Not Acceptable",
                             "originalRequest": {
                                 "url": {
@@ -1546,7 +1546,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "0bc691cf-6de0-4c9f-805e-785b4514fd82",
+                            "id": "831d719f-d74a-48fe-8a45-b3193fc2e75d",
                             "name": "Gone",
                             "originalRequest": {
                                 "url": {
@@ -1591,7 +1591,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "83f1585c-271a-4cd3-9a82-eea5390d6255",
+                            "id": "f70fdc37-8c38-4e74-b335-cf07dd9af5b9",
                             "name": "Internal Server Error",
                             "originalRequest": {
                                 "url": {
@@ -1636,7 +1636,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "c7d5ff08-508e-4f48-8c67-973962cd4e72",
+                            "id": "6877728a-711f-48be-b47a-7714e5edce68",
                             "name": "Service Unavailable",
                             "originalRequest": {
                                 "url": {
@@ -1699,11 +1699,11 @@
         "type": "noauth"
     },
     "info": {
-        "_postman_id": "0dea736f-6d35-494d-8d58-bc48f308be09",
+        "_postman_id": "477778d3-19a0-44ff-9b1f-1321e0d936f8",
         "name": "Kadaster - BRK-Kadasterpersonen-Bevragen API",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {
-            "content": "D.m.v. deze toepassing worden meerdere, korte bevragingen op de Basis Registratie Kadaster beschikbaar gesteld. Deze toepassing betreft het verstrekken van informatie over bij het Kadaster geregistreerde natuurlijk personen en niet-natuurlijk personen.\n\nContact Support:\n Name: Kadaster Haal Centraal BRK-Bevragen",
+            "content": "Deze API verstrekt informatie over bij het kadaster registreerde personen die (als het goed is) niet zijn geregistreerd in het Handelsregister of de Basisregistratie Personen (inclusief de Registratie Niet Ingezetenen). Het gaat meestal over personen die in het buitenland verblijven of organisaties die in het buitenland gevestigd zijn, en een zakelijk recht hebben op een kadastraal onroerende zaak. Personen in de basisregistratie kadaster worden niet geactualiseerd. De API verstrekt gegevens van personen op het moment van vestiging van het zakelijk recht.\n\nContact Support:\n Name: Kadaster Haal Centraal BRK-Bevragen",
             "type": "text/plain"
         }
     }
