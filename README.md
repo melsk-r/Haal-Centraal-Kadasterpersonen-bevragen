@@ -1,5 +1,5 @@
 # Haal Centraal BRK Kadasterpersonen bevragen
-De BRK Kadasterpersonen bevragen is een Haal Centraal API voor het zoeken en raadplegen van gegevens in de basisregistratie Kadaster voor alle binnengemeentelijke afnemers in NL, maar ook waterschappen, belastingsamenwerkingen en andere overheden.
+De BRK Kadasterpersonen bevragen is een Haal Centraal API voor het zoeken en raadplegen van persoonsgegevens in de basisregistratie Kadaster voor alle binnengemeentelijke afnemers in NL, maar ook waterschappen, belastingsamenwerkingen en andere overheden.
 
 Deze API is ontwikkeld in nauwe samenhang met [BRK-bevragen](https://github.com/VNG-Realisatie/Haal-Centraal-BRK-bevragen) maar kan zelfstandig en met eigen versiebeheer worden doorontwikkeld.
 
@@ -7,9 +7,6 @@ Meld je aan bij het kadaster om [aan te sluiten](https://formulieren.kadaster.nl
 
 ## Getting started
 Wil je een aansluiting ontwikkelen? Dan is de [getting started](./docs/getting-started.md) een goed begin. De API is technisch gespecificeerd in Open API specificaties (zie hieronder bij documentatie).
-
-# Planning Haal Centraal
-https://eu-rm.roadmunk.com/publish/29a13c572a0dfc79f1d0386fc572e15383afe11f
 
 ## Documentatie
 * [Productvisie](https://github.com/VNG-Realisatie/BRK-bevragingen/blob/master/docs/productvision.md)
