@@ -14,7 +14,7 @@ nav:
       - title: Getting started
         path: /getting-started
       - title: User stories
-        url: https://github.com/VNG-Realisatie/Haal-Centraal-Kadasterpersonen-bevragen"/issues?q=is%3Aissue+is%3Aopen+
+        url: https://github.com/VNG-Realisatie/Haal-Centraal-Kadasterpersonen-bevragen/issues?q=is%3Aissue+is%3Aopen+
         path: /user-stories
         target: blank
 #      - title: Goals canvas
