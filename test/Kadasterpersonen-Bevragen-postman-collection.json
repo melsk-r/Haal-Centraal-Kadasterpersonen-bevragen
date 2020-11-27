@@ -1,11 +1,11 @@
 {
     "item": [
         {
-            "id": "02b38b64-89b6-4fa2-9307-14b081104d15",
+            "id": "25e72274-953d-4f4b-be15-577f746033cb",
             "name": "kadasternatuurlijkpersonen",
             "item": [
                 {
-                    "id": "1d35c012-8313-4788-b8dc-7fd69689b8b7",
+                    "id": "46ac2e79-b372-4d9e-b9b7-8c7a4d4d1e4a",
                     "name": "Get Kadaster Personen",
                     "request": {
                         "name": "Get Kadaster Personen",
@@ -35,11 +35,11 @@
                             "variable": []
                         },
                         "method": "GET",
-                        "auth": {}
+                        "auth": null
                     },
                     "response": [
                         {
-                            "id": "dd5c3088-b3ee-4cbe-a0fa-fc6ffeaa5697",
+                            "id": "f18bbca1-373d-4fe7-9215-81e7633e57c9",
                             "name": "Zoekactie geslaagd",
                             "originalRequest": {
                                 "url": {
@@ -61,6 +61,16 @@
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -68,26 +78,26 @@
                             "code": 200,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
+                                    "description": "",
                                     "key": "warning",
-                                    "value": "299 https://service.../api/.../v1 \"Deze versie van de API is verouderd en zal uit dienst worden genomen op 2018-02-01. Raadpleeg voor meer informatie hier de documentatie: https://omgevingswet.../api/.../v1\".",
-                                    "description": ""
+                                    "value": "299 https://service.../api/.../v1 \"Deze versie van de API is verouderd en zal uit dienst worden genomen op 2018-02-01. Raadpleeg voor meer informatie hier de documentatie: https://omgevingswet.../api/.../v1\"."
                                 },
                                 {
                                     "key": "Content-Type",
                                     "value": "application/hal+json"
                                 }
                             ],
-                            "body": "{\n \"_links\": {\n  \"self\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\"\n  }\n },\n \"_embedded\": {\n  \"kadasterNatuurlijkPersonen\": [\n   {\n    \"identificatie\": \"<string>\",\n    \"omschrijving\": \"<string>\",\n    \"domein\": \"<string>\",\n    \"indicatieNietToonbareDiakriet\": \"<boolean>\",\n    \"beschikkingsbevoegdheid\": {\n     \"code\": \"<string>\",\n     \"waarde\": \"<string>\"\n    },\n    \"woonadres\": {\n     \"nummeraanduidingIdentificatie\": \"1234207890123456\",\n     \"huisnummer\": 26,\n     \"huisletter\": \"A\",\n     \"huisnummertoevoeging\": \"3\",\n     \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n     \"postcode\": \"1234AA\",\n     \"woonplaats\": \"Nootdorp\",\n     \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n     \"adresregel2\": \"1234AA Nootdorp\"\n    },\n    \"postadres\": {\n     \"nummeraanduidingIdentificatie\": \"<string>\",\n     \"huisnummer\": \"<integer>\",\n     \"huisletter\": \"A\",\n     \"huisnummertoevoeging\": \"3\",\n     \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n     \"postcode\": \"1234AA\",\n     \"woonplaats\": \"Nootdorp\",\n     \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n     \"adresregel2\": \"1234AA Nootdorp\",\n     \"adresregel3\": \"Selangor\",\n     \"land\": {\n      \"code\": \"<string>\",\n      \"waarde\": \"<string>\"\n     },\n     \"postbusnummer\": \"<integer>\"\n    },\n    \"kadastraalOnroerendeZaakIdentificaties\": [\n     \"<string>\",\n     \"<string>\"\n    ],\n    \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n    \"landWaarnaarVertrokken\": {\n     \"code\": \"<string>\",\n     \"waarde\": \"<string>\"\n    },\n    \"geslachtsaanduiding\": \"<string>\",\n    \"heeftPartnerschap\": [\n     {\n      \"datumOntbinding\": {\n       \"dag\": 3,\n       \"datum\": {},\n       \"jaar\": 1989,\n       \"maand\": 5\n      },\n      \"datumSluiting\": {\n       \"dag\": 3,\n       \"datum\": {},\n       \"jaar\": 1989,\n       \"maand\": 5\n      },\n      \"naam\": {\n       \"geslachtsnaam\": \"<string>\",\n       \"voornamen\": \"<string>\",\n       \"voorvoegsel\": \"<string>\"\n      }\n     },\n     {\n      \"datumOntbinding\": {\n       \"dag\": 3,\n       \"datum\": {},\n       \"jaar\": 1989,\n       \"maand\": 5\n      },\n      \"datumSluiting\": {\n       \"dag\": 3,\n       \"datum\": {},\n       \"jaar\": 1989,\n       \"maand\": 5\n      },\n      \"naam\": {\n       \"geslachtsnaam\": \"<string>\",\n       \"voornamen\": \"<string>\",\n       \"voorvoegsel\": \"<string>\"\n      }\n     }\n    ],\n    \"naam\": {\n     \"geslachtsnaam\": \"<string>\",\n     \"voornamen\": \"<string>\",\n     \"voorvoegsel\": \"<string>\"\n    },\n    \"geboorte\": {\n     \"plaats\": \"<string>\",\n     \"datum\": {\n      \"dag\": 3,\n      \"datum\": {},\n      \"jaar\": 1989,\n      \"maand\": 5\n     },\n     \"land\": {\n      \"code\": \"<string>\",\n      \"waarde\": \"<string>\"\n     }\n    },\n    \"overlijden\": {\n     \"datum\": {\n      \"dag\": 3,\n      \"datum\": {},\n      \"jaar\": 1989,\n      \"maand\": 5\n     }\n    },\n    \"_links\": {\n     \"self\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"woonadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"postadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"kadastraalOnroerendeZaken\": [\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      },\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      }\n     ],\n     \"zakelijkGerechtigden\": [\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      },\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      }\n     ]\n    }\n   },\n   {\n    \"identificatie\": \"<string>\",\n    \"omschrijving\": \"<string>\",\n    \"domein\": \"<string>\",\n    \"indicatieNietToonbareDiakriet\": \"<boolean>\",\n    \"beschikkingsbevoegdheid\": {\n     \"code\": \"<string>\",\n     \"waarde\": \"<string>\"\n    },\n    \"woonadres\": {\n     \"nummeraanduidingIdentificatie\": \"1234207890123456\",\n     \"huisnummer\": 26,\n     \"huisletter\": \"A\",\n     \"huisnummertoevoeging\": \"3\",\n     \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n     \"postcode\": \"1234AA\",\n     \"woonplaats\": \"Nootdorp\",\n     \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n     \"adresregel2\": \"1234AA Nootdorp\"\n    },\n    \"postadres\": {\n     \"nummeraanduidingIdentificatie\": \"<string>\",\n     \"huisnummer\": \"<integer>\",\n     \"huisletter\": \"A\",\n     \"huisnummertoevoeging\": \"3\",\n     \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n     \"postcode\": \"1234AA\",\n     \"woonplaats\": \"Nootdorp\",\n     \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n     \"adresregel2\": \"1234AA Nootdorp\",\n     \"adresregel3\": \"Selangor\",\n     \"land\": {\n      \"code\": \"<string>\",\n      \"waarde\": \"<string>\"\n     },\n     \"postbusnummer\": \"<integer>\"\n    },\n    \"kadastraalOnroerendeZaakIdentificaties\": [\n     \"<string>\",\n     \"<string>\"\n    ],\n    \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n    \"landWaarnaarVertrokken\": {\n     \"code\": \"<string>\",\n     \"waarde\": \"<string>\"\n    },\n    \"geslachtsaanduiding\": \"<string>\",\n    \"heeftPartnerschap\": [\n     {\n      \"datumOntbinding\": {\n       \"dag\": 3,\n       \"datum\": {},\n       \"jaar\": 1989,\n       \"maand\": 5\n      },\n      \"datumSluiting\": {\n       \"dag\": 3,\n       \"datum\": {},\n       \"jaar\": 1989,\n       \"maand\": 5\n      },\n      \"naam\": {\n       \"geslachtsnaam\": \"<string>\",\n       \"voornamen\": \"<string>\",\n       \"voorvoegsel\": \"<string>\"\n      }\n     },\n     {\n      \"datumOntbinding\": {\n       \"dag\": 3,\n       \"datum\": {},\n       \"jaar\": 1989,\n       \"maand\": 5\n      },\n      \"datumSluiting\": {\n       \"dag\": 3,\n       \"datum\": {},\n       \"jaar\": 1989,\n       \"maand\": 5\n      },\n      \"naam\": {\n       \"geslachtsnaam\": \"<string>\",\n       \"voornamen\": \"<string>\",\n       \"voorvoegsel\": \"<string>\"\n      }\n     }\n    ],\n    \"naam\": {\n     \"geslachtsnaam\": \"<string>\",\n     \"voornamen\": \"<string>\",\n     \"voorvoegsel\": \"<string>\"\n    },\n    \"geboorte\": {\n     \"plaats\": \"<string>\",\n     \"datum\": {\n      \"dag\": 3,\n      \"datum\": {},\n      \"jaar\": 1989,\n      \"maand\": 5\n     },\n     \"land\": {\n      \"code\": \"<string>\",\n      \"waarde\": \"<string>\"\n     }\n    },\n    \"overlijden\": {\n     \"datum\": {\n      \"dag\": 3,\n      \"datum\": {},\n      \"jaar\": 1989,\n      \"maand\": 5\n     }\n    },\n    \"_links\": {\n     \"self\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"woonadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"postadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"kadastraalOnroerendeZaken\": [\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      },\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      }\n     ],\n     \"zakelijkGerechtigden\": [\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      },\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      }\n     ]\n    }\n   }\n  ]\n }\n}",
+                            "body": "{\n \"_links\": {\n  \"self\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": true,\n   \"title\": \"adipisicing\"\n  }\n },\n \"_embedded\": {\n  \"kadasterNatuurlijkPersonen\": [\n   {\n    \"geheimhoudingPersoonsgegevens\": true,\n    \"landWaarnaarVertrokken\": {\n     \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    \"geslachtsaanduiding\": {\n     \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    \"heeftPartnerschap\": [\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    ],\n    \"naam\": {\n     \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    \"geboorte\": {\n     \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    \"overlijden\": {\n     \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    \"_links\": {\n     \"self\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": false,\n      \"title\": \"dolor ad in\"\n     },\n     \"woonadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"reprehenderit consequat est adipisicing\"\n     },\n     \"postadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"laboris aliquip fugiat\"\n     },\n     \"kadastraalOnroerendeZaken\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ],\n     \"zakelijkGerechtigden\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ]\n    }\n   },\n   {\n    \"geheimhoudingPersoonsgegevens\": true,\n    \"landWaarnaarVertrokken\": {\n     \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    \"geslachtsaanduiding\": {\n     \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    \"heeftPartnerschap\": [\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     },\n     {\n      \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n     }\n    ],\n    \"naam\": {\n     \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    \"geboorte\": {\n     \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    \"overlijden\": {\n     \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n    },\n    \"_links\": {\n     \"self\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": false,\n      \"title\": \"Lorem ullamco enim\"\n     },\n     \"woonadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"amet voluptate adipisicing in\"\n     },\n     \"postadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": false,\n      \"title\": \"enim aliquip\"\n     },\n     \"kadastraalOnroerendeZaken\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ],\n     \"zakelijkGerechtigden\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ]\n    }\n   }\n  ]\n }\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "60618038-dd4d-4c95-867b-4b55232f13ba",
+                            "id": "a205bea5-2545-4cb7-a16a-12b25c8a96be",
                             "name": "Bad Request",
                             "originalRequest": {
                                 "url": {
@@ -109,6 +119,16 @@
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -116,9 +136,9 @@
                             "code": 400,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -130,7 +150,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "d29d8372-3f1d-4266-9e74-8daf7f20d15c",
+                            "id": "92840328-6b0e-4bf1-9f5d-7bd55aa4ac27",
                             "name": "Unauthorized",
                             "originalRequest": {
                                 "url": {
@@ -152,6 +172,16 @@
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -159,9 +189,9 @@
                             "code": 401,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -173,7 +203,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "5c532f3c-83a6-437c-a7cd-2f28a90c03aa",
+                            "id": "15f03073-4b48-4096-ab35-fcb66c582ec0",
                             "name": "Forbidden",
                             "originalRequest": {
                                 "url": {
@@ -195,6 +225,16 @@
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -202,9 +242,9 @@
                             "code": 403,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -216,7 +256,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "b8a2f4b3-61a7-4711-982c-3e0b9b824ffb",
+                            "id": "1bee43e3-ba50-4798-94c8-352219584055",
                             "name": "Not Acceptable",
                             "originalRequest": {
                                 "url": {
@@ -238,6 +278,16 @@
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -245,9 +295,9 @@
                             "code": 406,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -259,7 +309,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "c64cbfb6-720b-411e-a199-25824aca8c07",
+                            "id": "dea579d7-51a0-453c-9105-e0eedb5f85bb",
                             "name": "Gone",
                             "originalRequest": {
                                 "url": {
@@ -281,6 +331,16 @@
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -288,9 +348,9 @@
                             "code": 410,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -302,7 +362,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "1e8cedd3-6768-4dcb-9cb7-68f3c3364ae0",
+                            "id": "7551d04f-eb01-4f5e-b9fe-478e4ed8d7cd",
                             "name": "Internal Server Error",
                             "originalRequest": {
                                 "url": {
@@ -324,6 +384,16 @@
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -331,9 +401,9 @@
                             "code": 500,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -345,7 +415,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "420751ad-06cc-40e9-aeb2-dc97947eeda7",
+                            "id": "6586be6a-1e5a-4b45-9b0e-af772f962db0",
                             "name": "Service Unavailable",
                             "originalRequest": {
                                 "url": {
@@ -367,6 +437,16 @@
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -374,9 +454,9 @@
                             "code": 503,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -391,7 +471,7 @@
                     "event": []
                 },
                 {
-                    "id": "86bb91c0-0773-4506-aba4-8dffd4d40c76",
+                    "id": "127b84c3-93c2-4f62-ade9-7ef532b2d5ae",
                     "name": "Get Kadaster Persoon",
                     "request": {
                         "name": "Get Kadaster Persoon",
@@ -424,11 +504,11 @@
                             ]
                         },
                         "method": "GET",
-                        "auth": {}
+                        "auth": null
                     },
                     "response": [
                         {
-                            "id": "89cc7532-45e4-47e5-bfcd-4d1db4ba4c35",
+                            "id": "aa64f712-0d0b-49e3-848f-f675f168cf65",
                             "name": "Zoekactie geslaagd",
                             "originalRequest": {
                                 "url": {
@@ -452,6 +532,16 @@
                                         }
                                     ]
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -459,26 +549,26 @@
                             "code": 200,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
+                                    "description": "",
                                     "key": "warning",
-                                    "value": "299 https://service.../api/.../v1 \"Deze versie van de API is verouderd en zal uit dienst worden genomen op 2018-02-01. Raadpleeg voor meer informatie hier de documentatie: https://omgevingswet.../api/.../v1\".",
-                                    "description": ""
+                                    "value": "299 https://service.../api/.../v1 \"Deze versie van de API is verouderd en zal uit dienst worden genomen op 2018-02-01. Raadpleeg voor meer informatie hier de documentatie: https://omgevingswet.../api/.../v1\"."
                                 },
                                 {
                                     "key": "Content-Type",
                                     "value": "application/hal+json"
                                 }
                             ],
-                            "body": "{\n \"identificatie\": \"<string>\",\n \"omschrijving\": \"<string>\",\n \"domein\": \"<string>\",\n \"indicatieNietToonbareDiakriet\": \"<boolean>\",\n \"beschikkingsbevoegdheid\": {\n  \"code\": \"<string>\",\n  \"waarde\": \"<string>\"\n },\n \"woonadres\": {\n  \"nummeraanduidingIdentificatie\": \"1234207890123456\",\n  \"huisnummer\": 26,\n  \"huisletter\": \"A\",\n  \"huisnummertoevoeging\": \"3\",\n  \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n  \"postcode\": \"1234AA\",\n  \"woonplaats\": \"Nootdorp\",\n  \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n  \"adresregel2\": \"1234AA Nootdorp\"\n },\n \"postadres\": {\n  \"nummeraanduidingIdentificatie\": \"<string>\",\n  \"huisnummer\": \"<integer>\",\n  \"huisletter\": \"A\",\n  \"huisnummertoevoeging\": \"3\",\n  \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n  \"postcode\": \"1234AA\",\n  \"woonplaats\": \"Nootdorp\",\n  \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n  \"adresregel2\": \"1234AA Nootdorp\",\n  \"adresregel3\": \"Selangor\",\n  \"land\": {\n   \"code\": \"<string>\",\n   \"waarde\": \"<string>\"\n  },\n  \"postbusnummer\": \"<integer>\"\n },\n \"kadastraalOnroerendeZaakIdentificaties\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"geheimhoudingPersoonsgegevens\": \"<boolean>\",\n \"landWaarnaarVertrokken\": {\n  \"code\": \"<string>\",\n  \"waarde\": \"<string>\"\n },\n \"geslachtsaanduiding\": \"<string>\",\n \"heeftPartnerschap\": [\n  {\n   \"datumOntbinding\": {\n    \"dag\": 3,\n    \"datum\": {},\n    \"jaar\": 1989,\n    \"maand\": 5\n   },\n   \"datumSluiting\": {\n    \"dag\": 3,\n    \"datum\": {},\n    \"jaar\": 1989,\n    \"maand\": 5\n   },\n   \"naam\": {\n    \"geslachtsnaam\": \"<string>\",\n    \"voornamen\": \"<string>\",\n    \"voorvoegsel\": \"<string>\"\n   }\n  },\n  {\n   \"datumOntbinding\": {\n    \"dag\": 3,\n    \"datum\": {},\n    \"jaar\": 1989,\n    \"maand\": 5\n   },\n   \"datumSluiting\": {\n    \"dag\": 3,\n    \"datum\": {},\n    \"jaar\": 1989,\n    \"maand\": 5\n   },\n   \"naam\": {\n    \"geslachtsnaam\": \"<string>\",\n    \"voornamen\": \"<string>\",\n    \"voorvoegsel\": \"<string>\"\n   }\n  }\n ],\n \"naam\": {\n  \"geslachtsnaam\": \"<string>\",\n  \"voornamen\": \"<string>\",\n  \"voorvoegsel\": \"<string>\"\n },\n \"geboorte\": {\n  \"plaats\": \"<string>\",\n  \"datum\": {\n   \"dag\": 3,\n   \"datum\": {},\n   \"jaar\": 1989,\n   \"maand\": 5\n  },\n  \"land\": {\n   \"code\": \"<string>\",\n   \"waarde\": \"<string>\"\n  }\n },\n \"overlijden\": {\n  \"datum\": {\n   \"dag\": 3,\n   \"datum\": {},\n   \"jaar\": 1989,\n   \"maand\": 5\n  }\n },\n \"_links\": {\n  \"self\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\"\n  },\n  \"woonadres\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\"\n  },\n  \"postadres\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\"\n  },\n  \"kadastraalOnroerendeZaken\": [\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\"\n   },\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\"\n   }\n  ],\n  \"zakelijkGerechtigden\": [\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\"\n   },\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\"\n   }\n  ]\n }\n}",
+                            "body": "{\n \"identificatie\": \"officia irure nulla ad\",\n \"omschrijving\": \"anim\",\n \"domein\": \"Ut ut nulla\",\n \"indicatieNietToonbareDiakriet\": false,\n \"beschikkingsbevoegdheid\": {\n  \"code\": \"cupidatat elit nulla reprehenderit\",\n  \"waarde\": \"voluptate tempor ex\"\n },\n \"woonadres\": {\n  \"nummeraanduidingIdentificatie\": \"1234207890123456\",\n  \"huisnummer\": 26,\n  \"huisletter\": \"A\",\n  \"huisnummertoevoeging\": \"3\",\n  \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n  \"postcode\": \"1234AA\",\n  \"woonplaats\": \"Nootdorp\",\n  \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n  \"adresregel2\": \"1234AA Nootdorp\"\n },\n \"postadres\": {\n  \"nummeraanduidingIdentificatie\": \"1234207890123456\",\n  \"huisnummer\": 26,\n  \"huisletter\": \"A\",\n  \"huisnummertoevoeging\": \"3\",\n  \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n  \"postcode\": \"1234AA\",\n  \"woonplaats\": \"Nootdorp\",\n  \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n  \"adresregel2\": \"1234AA Nootdorp\"\n },\n \"kadastraalOnroerendeZaakIdentificaties\": [\n  \"sint voluptate culpa\",\n  \"s\"\n ],\n \"geheimhoudingPersoonsgegevens\": true,\n \"landWaarnaarVertrokken\": {\n  \"code\": \"eiusmod reprehenderit\",\n  \"waarde\": \"Excepteur mollit\"\n },\n \"geslachtsaanduiding\": \"vrouw\",\n \"heeftPartnerschap\": [\n  {\n   \"datumOntbinding\": {\n    \"dag\": 3,\n    \"datum\": \"1960-04-11\",\n    \"jaar\": 1989,\n    \"maand\": 5\n   },\n   \"datumSluiting\": {\n    \"dag\": 3,\n    \"datum\": \"1966-06-07\",\n    \"jaar\": 1989,\n    \"maand\": 5\n   },\n   \"naam\": {\n    \"geslachtsnaam\": \"officia in incididunt consectetur aliquip\",\n    \"voornamen\": \"in nulla\",\n    \"voorvoegsel\": \"no\"\n   }\n  },\n  {\n   \"datumOntbinding\": {\n    \"dag\": 3,\n    \"datum\": \"2002-05-24\",\n    \"jaar\": 1989,\n    \"maand\": 5\n   },\n   \"datumSluiting\": {\n    \"dag\": 3,\n    \"datum\": \"2012-07-05\",\n    \"jaar\": 1989,\n    \"maand\": 5\n   },\n   \"naam\": {\n    \"geslachtsnaam\": \"elit\",\n    \"voornamen\": \"cillum magna\",\n    \"voorvoegsel\": \"adipisicing ex nulla pariatur\"\n   }\n  }\n ],\n \"naam\": {\n  \"geslachtsnaam\": \"ut Ut Excepteu\",\n  \"voornamen\": \"ut consequat tempor consectetur\",\n  \"voorvoegsel\": \"laborum ut in\"\n },\n \"geboorte\": {\n  \"plaats\": \"dolor ipsum labore magna cillum\",\n  \"datum\": {\n   \"dag\": 3,\n   \"datum\": \"1962-07-28\",\n   \"jaar\": 1989,\n   \"maand\": 5\n  },\n  \"land\": {\n   \"code\": \"nonamet ullamco\",\n   \"waarde\": \"sunt elit\"\n  }\n },\n \"overlijden\": {\n  \"datum\": {\n   \"dag\": 3,\n   \"datum\": \"2011-03-29\",\n   \"jaar\": 1989,\n   \"maand\": 5\n  }\n },\n \"_links\": {\n  \"self\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": false,\n   \"title\": \"magna elit veniam anim sit\"\n  },\n  \"woonadres\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": false,\n   \"title\": \"non proident deserunt\"\n  },\n  \"postadres\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": false,\n   \"title\": \"occae\"\n  },\n  \"kadastraalOnroerendeZaken\": [\n   {\n    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n   },\n   {\n    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n   }\n  ],\n  \"zakelijkGerechtigden\": [\n   {\n    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n   },\n   {\n    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n   }\n  ]\n }\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "1c8ee7e8-70e0-4159-9e6c-64cc808b1660",
+                            "id": "b15e34ce-2581-4d25-94db-aacc6698a6b9",
                             "name": "Bad Request",
                             "originalRequest": {
                                 "url": {
@@ -502,6 +592,16 @@
                                         }
                                     ]
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -509,9 +609,9 @@
                             "code": 400,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -523,7 +623,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "65e68e6c-b319-4068-a04c-6aeca5f5e87e",
+                            "id": "51cbb481-f8d8-44da-b56c-c03518002550",
                             "name": "Unauthorized",
                             "originalRequest": {
                                 "url": {
@@ -547,6 +647,16 @@
                                         }
                                     ]
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -554,9 +664,9 @@
                             "code": 401,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -568,7 +678,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "7172a102-8acc-4f8f-af26-acd7f1d1321a",
+                            "id": "19147e3e-038e-4166-86c7-19266f8b0263",
                             "name": "Forbidden",
                             "originalRequest": {
                                 "url": {
@@ -592,6 +702,16 @@
                                         }
                                     ]
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -599,9 +719,9 @@
                             "code": 403,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -613,7 +733,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "47ea99dc-9347-4ebc-a783-5c7baeb21aaf",
+                            "id": "9f7ff4da-5116-42d4-9f19-4c18c7d462fa",
                             "name": "Not Found",
                             "originalRequest": {
                                 "url": {
@@ -637,6 +757,16 @@
                                         }
                                     ]
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -644,9 +774,9 @@
                             "code": 404,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -658,7 +788,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "47cb8477-e9d3-48e5-ba3e-f8b83028757f",
+                            "id": "0ff40134-4ddc-4055-ac5b-fb20730a35ba",
                             "name": "Not Acceptable",
                             "originalRequest": {
                                 "url": {
@@ -682,6 +812,16 @@
                                         }
                                     ]
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -689,9 +829,9 @@
                             "code": 406,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -703,7 +843,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "1f4b28b5-5741-4069-b1f8-7fc1a429bfcf",
+                            "id": "665672a6-f359-44d1-b7ee-5ca34d3f9e4f",
                             "name": "Gone",
                             "originalRequest": {
                                 "url": {
@@ -727,6 +867,16 @@
                                         }
                                     ]
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -734,9 +884,9 @@
                             "code": 410,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -748,7 +898,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "d077d7c9-debb-4503-82c6-a88561490820",
+                            "id": "28f450f7-41f0-4961-944b-fba90bfcea95",
                             "name": "Internal Server Error",
                             "originalRequest": {
                                 "url": {
@@ -772,6 +922,16 @@
                                         }
                                     ]
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -779,9 +939,9 @@
                             "code": 500,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -793,7 +953,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "1e7f4c68-eb1e-417f-9bc6-1542259e5f72",
+                            "id": "105be68f-2def-4c33-a02e-9b31960b48dd",
                             "name": "Service Unavailable",
                             "originalRequest": {
                                 "url": {
@@ -817,6 +977,16 @@
                                         }
                                     ]
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -824,9 +994,9 @@
                             "code": 503,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -844,11 +1014,11 @@
             "event": []
         },
         {
-            "id": "82a5f661-1194-46ea-90f2-c9b31a6cb02b",
+            "id": "2525e0b0-4c42-47cc-ad10-04bf041951cc",
             "name": "kadasternietnatuurlijkpersonen",
             "item": [
                 {
-                    "id": "d7ee4111-543b-4a87-ab4d-e96dacf626c5",
+                    "id": "23121269-3dfb-4dab-8fa9-288a81b47802",
                     "name": "Get Kadaster Niet Natuurlijk Personen",
                     "request": {
                         "name": "Get Kadaster Niet Natuurlijk Personen",
@@ -878,11 +1048,11 @@
                             "variable": []
                         },
                         "method": "GET",
-                        "auth": {}
+                        "auth": null
                     },
                     "response": [
                         {
-                            "id": "85ef4f2f-4616-4e7a-b9fe-0dc7203f1b04",
+                            "id": "2ce7893f-f111-498f-b736-11cecd028120",
                             "name": "Zoekactie geslaagd",
                             "originalRequest": {
                                 "url": {
@@ -904,6 +1074,16 @@
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -911,26 +1091,26 @@
                             "code": 200,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
+                                    "description": "",
                                     "key": "warning",
-                                    "value": "299 https://service.../api/.../v1 \"Deze versie van de API is verouderd en zal uit dienst worden genomen op 2018-02-01. Raadpleeg voor meer informatie hier de documentatie: https://omgevingswet.../api/.../v1\".",
-                                    "description": ""
+                                    "value": "299 https://service.../api/.../v1 \"Deze versie van de API is verouderd en zal uit dienst worden genomen op 2018-02-01. Raadpleeg voor meer informatie hier de documentatie: https://omgevingswet.../api/.../v1\"."
                                 },
                                 {
                                     "key": "Content-Type",
                                     "value": "application/hal+json"
                                 }
                             ],
-                            "body": "{\n \"_links\": {\n  \"self\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\"\n  }\n },\n \"_embedded\": {\n  \"kadasterNietNatuurlijkPersonen\": [\n   {\n    \"identificatie\": \"<string>\",\n    \"omschrijving\": \"<string>\",\n    \"domein\": \"<string>\",\n    \"indicatieNietToonbareDiakriet\": \"<boolean>\",\n    \"beschikkingsbevoegdheid\": {\n     \"code\": \"<string>\",\n     \"waarde\": \"<string>\"\n    },\n    \"woonadres\": {\n     \"nummeraanduidingIdentificatie\": \"1234207890123456\",\n     \"huisnummer\": 26,\n     \"huisletter\": \"A\",\n     \"huisnummertoevoeging\": \"3\",\n     \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n     \"postcode\": \"1234AA\",\n     \"woonplaats\": \"Nootdorp\",\n     \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n     \"adresregel2\": \"1234AA Nootdorp\"\n    },\n    \"postadres\": {\n     \"nummeraanduidingIdentificatie\": \"<string>\",\n     \"huisnummer\": \"<integer>\",\n     \"huisletter\": \"A\",\n     \"huisnummertoevoeging\": \"3\",\n     \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n     \"postcode\": \"1234AA\",\n     \"woonplaats\": \"Nootdorp\",\n     \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n     \"adresregel2\": \"1234AA Nootdorp\",\n     \"adresregel3\": \"Selangor\",\n     \"land\": {\n      \"code\": \"<string>\",\n      \"waarde\": \"<string>\"\n     },\n     \"postbusnummer\": \"<integer>\"\n    },\n    \"kadastraalOnroerendeZaakIdentificaties\": [\n     \"<string>\",\n     \"<string>\"\n    ],\n    \"statutaireNaam\": \"<string>\",\n    \"statutaireZetel\": \"<string>\",\n    \"rechtsvorm\": {\n     \"code\": \"<string>\",\n     \"waarde\": \"<string>\"\n    },\n    \"kvkNummer\": \"<string>\",\n    \"rsin\": \"<string>\",\n    \"_links\": {\n     \"self\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"woonadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"postadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"kadastraalOnroerendeZaken\": [\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      },\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      }\n     ],\n     \"zakelijkGerechtigden\": [\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      },\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      }\n     ]\n    }\n   },\n   {\n    \"identificatie\": \"<string>\",\n    \"omschrijving\": \"<string>\",\n    \"domein\": \"<string>\",\n    \"indicatieNietToonbareDiakriet\": \"<boolean>\",\n    \"beschikkingsbevoegdheid\": {\n     \"code\": \"<string>\",\n     \"waarde\": \"<string>\"\n    },\n    \"woonadres\": {\n     \"nummeraanduidingIdentificatie\": \"1234207890123456\",\n     \"huisnummer\": 26,\n     \"huisletter\": \"A\",\n     \"huisnummertoevoeging\": \"3\",\n     \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n     \"postcode\": \"1234AA\",\n     \"woonplaats\": \"Nootdorp\",\n     \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n     \"adresregel2\": \"1234AA Nootdorp\"\n    },\n    \"postadres\": {\n     \"nummeraanduidingIdentificatie\": \"<string>\",\n     \"huisnummer\": \"<integer>\",\n     \"huisletter\": \"A\",\n     \"huisnummertoevoeging\": \"3\",\n     \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n     \"postcode\": \"1234AA\",\n     \"woonplaats\": \"Nootdorp\",\n     \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n     \"adresregel2\": \"1234AA Nootdorp\",\n     \"adresregel3\": \"Selangor\",\n     \"land\": {\n      \"code\": \"<string>\",\n      \"waarde\": \"<string>\"\n     },\n     \"postbusnummer\": \"<integer>\"\n    },\n    \"kadastraalOnroerendeZaakIdentificaties\": [\n     \"<string>\",\n     \"<string>\"\n    ],\n    \"statutaireNaam\": \"<string>\",\n    \"statutaireZetel\": \"<string>\",\n    \"rechtsvorm\": {\n     \"code\": \"<string>\",\n     \"waarde\": \"<string>\"\n    },\n    \"kvkNummer\": \"<string>\",\n    \"rsin\": \"<string>\",\n    \"_links\": {\n     \"self\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"woonadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"postadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": \"<boolean>\",\n      \"title\": \"<string>\"\n     },\n     \"kadastraalOnroerendeZaken\": [\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      },\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      }\n     ],\n     \"zakelijkGerechtigden\": [\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      },\n      {\n       \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n       \"templated\": \"<boolean>\",\n       \"title\": \"<string>\"\n      }\n     ]\n    }\n   }\n  ]\n }\n}",
+                            "body": "{\n \"_links\": {\n  \"self\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": true,\n   \"title\": \"laborum cillum\"\n  }\n },\n \"_embedded\": {\n  \"kadasterNietNatuurlijkPersonen\": [\n   {\n    \"identificatie\": \"consequat sit sed aliqua\",\n    \"omschrijving\": \"consequat\",\n    \"domein\": \"anim enim quis\",\n    \"indicatieNietToonbareDiakriet\": true,\n    \"beschikkingsbevoegdheid\": {\n     \"code\": \"ad cupidatat nisi sed deserunt\",\n     \"waarde\": \"eu fugiat tempor\"\n    },\n    \"woonadres\": {\n     \"nummeraanduidingIdentificatie\": \"1234207890123456\",\n     \"huisnummer\": 26,\n     \"huisletter\": \"A\",\n     \"huisnummertoevoeging\": \"3\",\n     \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n     \"postcode\": \"1234AA\",\n     \"woonplaats\": \"Nootdorp\",\n     \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n     \"adresregel2\": \"1234AA Nootdorp\"\n    },\n    \"postadres\": {\n     \"nummeraanduidingIdentificatie\": \"1234207890123456\",\n     \"huisnummer\": 26,\n     \"huisletter\": \"A\",\n     \"huisnummertoevoeging\": \"3\",\n     \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n     \"postcode\": \"1234AA\",\n     \"woonplaats\": \"Nootdorp\",\n     \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n     \"adresregel2\": \"1234AA Nootdorp\"\n    },\n    \"kadastraalOnroerendeZaakIdentificaties\": [\n     \"minim Duis amet veniam\",\n     \"Ut adipisicing\"\n    ],\n    \"statutaireNaam\": \"non aliquip\",\n    \"statutaireZetel\": \"ad elit tempor incididunt et\",\n    \"rechtsvorm\": {\n     \"code\": \"nisi aliqua ad Ut\",\n     \"waarde\": \"tempor\"\n    },\n    \"kvkNummer\": \"dolor in ut non\",\n    \"rsin\": \"commodo Duis labore\",\n    \"_links\": {\n     \"self\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": false,\n      \"title\": \"dolore incididunt occaecat ut\"\n     },\n     \"woonadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"occaecat pariatur do Ut proident\"\n     },\n     \"postadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"esse culpa minim\"\n     },\n     \"kadastraalOnroerendeZaken\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ],\n     \"zakelijkGerechtigden\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ]\n    }\n   },\n   {\n    \"identificatie\": \"incididunt \",\n    \"omschrijving\": \"in laborum eiusmod\",\n    \"domein\": \"elit commodo cupidatat\",\n    \"indicatieNietToonbareDiakriet\": false,\n    \"beschikkingsbevoegdheid\": {\n     \"code\": \"veniam ex do\",\n     \"waarde\": \"ipsum\"\n    },\n    \"woonadres\": {\n     \"nummeraanduidingIdentificatie\": \"1234207890123456\",\n     \"huisnummer\": 26,\n     \"huisletter\": \"A\",\n     \"huisnummertoevoeging\": \"3\",\n     \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n     \"postcode\": \"1234AA\",\n     \"woonplaats\": \"Nootdorp\",\n     \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n     \"adresregel2\": \"1234AA Nootdorp\"\n    },\n    \"postadres\": {\n     \"nummeraanduidingIdentificatie\": \"1234207890123456\",\n     \"huisnummer\": 26,\n     \"huisletter\": \"A\",\n     \"huisnummertoevoeging\": \"3\",\n     \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n     \"postcode\": \"1234AA\",\n     \"woonplaats\": \"Nootdorp\",\n     \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n     \"adresregel2\": \"1234AA Nootdorp\"\n    },\n    \"kadastraalOnroerendeZaakIdentificaties\": [\n     \"aliqua qui non L\",\n     \"elit labore\"\n    ],\n    \"statutaireNaam\": \"dolor ullamco\",\n    \"statutaireZetel\": \"ad\",\n    \"rechtsvorm\": {\n     \"code\": \"eius\",\n     \"waarde\": \"quis consectetur adipisicing\"\n    },\n    \"kvkNummer\": \"et\",\n    \"rsin\": \"irure consequat ut mollit et\",\n    \"_links\": {\n     \"self\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"occaecat velit non dolore\"\n     },\n     \"woonadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"in aliquip sunt exercitation\"\n     },\n     \"postadres\": {\n      \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n      \"templated\": true,\n      \"title\": \"minim eu\"\n     },\n     \"kadastraalOnroerendeZaken\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ],\n     \"zakelijkGerechtigden\": [\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      },\n      {\n       \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n      }\n     ]\n    }\n   }\n  ]\n }\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "5e8a4e68-a001-4f94-a0cd-e006d2a324b8",
+                            "id": "bc747e46-375b-4721-a496-db89c1546649",
                             "name": "Bad Request",
                             "originalRequest": {
                                 "url": {
@@ -952,6 +1132,16 @@
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -959,9 +1149,9 @@
                             "code": 400,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -973,7 +1163,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "e3d97701-0ded-49ae-993f-102c834ce597",
+                            "id": "e9172bc3-2144-4464-8918-7b23bdb98a48",
                             "name": "Unauthorized",
                             "originalRequest": {
                                 "url": {
@@ -995,6 +1185,16 @@
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -1002,9 +1202,9 @@
                             "code": 401,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -1016,7 +1216,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "1c8a9822-2a45-4bdb-9fb0-002cf0103e1a",
+                            "id": "15ef79ac-9d73-4b74-aed0-aea00856f6d4",
                             "name": "Forbidden",
                             "originalRequest": {
                                 "url": {
@@ -1038,6 +1238,16 @@
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -1045,9 +1255,9 @@
                             "code": 403,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -1059,7 +1269,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "7554e050-bf64-4ae3-ab56-2dd173e48809",
+                            "id": "d3783a33-8007-4a02-b14d-9de3851a063f",
                             "name": "Not Acceptable",
                             "originalRequest": {
                                 "url": {
@@ -1081,6 +1291,16 @@
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -1088,9 +1308,9 @@
                             "code": 406,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -1102,7 +1322,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "bdbc54db-7d0f-4553-95c0-718bcca75ea5",
+                            "id": "ae0f6585-6e2e-4bb0-a726-e5fd6657588a",
                             "name": "Gone",
                             "originalRequest": {
                                 "url": {
@@ -1124,6 +1344,16 @@
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -1131,9 +1361,9 @@
                             "code": 410,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -1145,7 +1375,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "dc17bddf-19e9-4797-9d1e-c7ea823460df",
+                            "id": "1b2d4e47-3b32-44ff-811c-10330bf5e2d0",
                             "name": "Internal Server Error",
                             "originalRequest": {
                                 "url": {
@@ -1167,6 +1397,16 @@
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -1174,9 +1414,9 @@
                             "code": 500,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -1188,7 +1428,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "41a636da-7e40-4bfc-a4b7-4d0b5eca5d88",
+                            "id": "8c3ee67e-f482-46ee-8969-ca0a7678555d",
                             "name": "Service Unavailable",
                             "originalRequest": {
                                 "url": {
@@ -1210,6 +1450,16 @@
                                     ],
                                     "variable": []
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -1217,9 +1467,9 @@
                             "code": 503,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -1234,7 +1484,7 @@
                     "event": []
                 },
                 {
-                    "id": "7ac06edf-3cd8-4440-afc7-454ce3dee4a1",
+                    "id": "04365133-e16f-428f-8dbe-2b99ca4ab405",
                     "name": "Get Kadaster Niet Natuurlijk Persoon",
                     "request": {
                         "name": "Get Kadaster Niet Natuurlijk Persoon",
@@ -1267,11 +1517,11 @@
                             ]
                         },
                         "method": "GET",
-                        "auth": {}
+                        "auth": null
                     },
                     "response": [
                         {
-                            "id": "31a41eb1-7445-457d-b6f0-6ad5cd69416e",
+                            "id": "518f9229-ec5a-487d-ab21-d3607a0d946e",
                             "name": "Zoekactie geslaagd",
                             "originalRequest": {
                                 "url": {
@@ -1295,6 +1545,16 @@
                                         }
                                     ]
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -1302,26 +1562,26 @@
                             "code": 200,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
+                                    "description": "",
                                     "key": "warning",
-                                    "value": "299 https://service.../api/.../v1 \"Deze versie van de API is verouderd en zal uit dienst worden genomen op 2018-02-01. Raadpleeg voor meer informatie hier de documentatie: https://omgevingswet.../api/.../v1\".",
-                                    "description": ""
+                                    "value": "299 https://service.../api/.../v1 \"Deze versie van de API is verouderd en zal uit dienst worden genomen op 2018-02-01. Raadpleeg voor meer informatie hier de documentatie: https://omgevingswet.../api/.../v1\"."
                                 },
                                 {
                                     "key": "Content-Type",
                                     "value": "application/hal+json"
                                 }
                             ],
-                            "body": "{\n \"identificatie\": \"<string>\",\n \"omschrijving\": \"<string>\",\n \"domein\": \"<string>\",\n \"indicatieNietToonbareDiakriet\": \"<boolean>\",\n \"beschikkingsbevoegdheid\": {\n  \"code\": \"<string>\",\n  \"waarde\": \"<string>\"\n },\n \"woonadres\": {\n  \"nummeraanduidingIdentificatie\": \"1234207890123456\",\n  \"huisnummer\": 26,\n  \"huisletter\": \"A\",\n  \"huisnummertoevoeging\": \"3\",\n  \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n  \"postcode\": \"1234AA\",\n  \"woonplaats\": \"Nootdorp\",\n  \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n  \"adresregel2\": \"1234AA Nootdorp\"\n },\n \"postadres\": {\n  \"nummeraanduidingIdentificatie\": \"<string>\",\n  \"huisnummer\": \"<integer>\",\n  \"huisletter\": \"A\",\n  \"huisnummertoevoeging\": \"3\",\n  \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n  \"postcode\": \"1234AA\",\n  \"woonplaats\": \"Nootdorp\",\n  \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n  \"adresregel2\": \"1234AA Nootdorp\",\n  \"adresregel3\": \"Selangor\",\n  \"land\": {\n   \"code\": \"<string>\",\n   \"waarde\": \"<string>\"\n  },\n  \"postbusnummer\": \"<integer>\"\n },\n \"kadastraalOnroerendeZaakIdentificaties\": [\n  \"<string>\",\n  \"<string>\"\n ],\n \"statutaireNaam\": \"<string>\",\n \"statutaireZetel\": \"<string>\",\n \"rechtsvorm\": {\n  \"code\": \"<string>\",\n  \"waarde\": \"<string>\"\n },\n \"kvkNummer\": \"<string>\",\n \"rsin\": \"<string>\",\n \"_links\": {\n  \"self\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\"\n  },\n  \"woonadres\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\"\n  },\n  \"postadres\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": \"<boolean>\",\n   \"title\": \"<string>\"\n  },\n  \"kadastraalOnroerendeZaken\": [\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\"\n   },\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\"\n   }\n  ],\n  \"zakelijkGerechtigden\": [\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\"\n   },\n   {\n    \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n    \"templated\": \"<boolean>\",\n    \"title\": \"<string>\"\n   }\n  ]\n }\n}",
+                            "body": "{\n \"identificatie\": \"anim ut\",\n \"omschrijving\": \"eiusmod laborum in in\",\n \"domein\": \"culpa id pariatur qui\",\n \"indicatieNietToonbareDiakriet\": false,\n \"beschikkingsbevoegdheid\": {\n  \"code\": \"dolor sit aliquip magna\",\n  \"waarde\": \"elit consequat\"\n },\n \"woonadres\": {\n  \"nummeraanduidingIdentificatie\": \"1234207890123456\",\n  \"huisnummer\": 26,\n  \"huisletter\": \"A\",\n  \"huisnummertoevoeging\": \"3\",\n  \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n  \"postcode\": \"1234AA\",\n  \"woonplaats\": \"Nootdorp\",\n  \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n  \"adresregel2\": \"1234AA Nootdorp\"\n },\n \"postadres\": {\n  \"nummeraanduidingIdentificatie\": \"1234207890123456\",\n  \"huisnummer\": 26,\n  \"huisletter\": \"A\",\n  \"huisnummertoevoeging\": \"3\",\n  \"straat\": \"Laan van de landinrichtingscommissie Duiven-Westervoort\",\n  \"postcode\": \"1234AA\",\n  \"woonplaats\": \"Nootdorp\",\n  \"adresregel1\": \"Laan van de landinrichtingscommissie Duiven-Westervoort 26A-3\",\n  \"adresregel2\": \"1234AA Nootdorp\"\n },\n \"kadastraalOnroerendeZaakIdentificaties\": [\n  \"nulla ut\",\n  \"Ut dolor cillum in\"\n ],\n \"statutaireNaam\": \"tempor labore eiusmod commodo Lorem\",\n \"statutaireZetel\": \"sint id\",\n \"rechtsvorm\": {\n  \"code\": \"et quis\",\n  \"waarde\": \"sint\"\n },\n \"kvkNummer\": \"cupidatat Lorem Ut dolor\",\n \"rsin\": \"nostrud eiusmod deserunt qui sunt\",\n \"_links\": {\n  \"self\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": true,\n   \"title\": \"aliqua consequat cillum nisi\"\n  },\n  \"woonadres\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": true,\n   \"title\": \"ipsum magna proident\"\n  },\n  \"postadres\": {\n   \"href\": \"https://datapunt.voorbeeldgemeente.nl/api/v{major-versie}/resourcename/{resource-identificatie}\",\n   \"templated\": false,\n   \"title\": \"amet eiusmod\"\n  },\n  \"kadastraalOnroerendeZaken\": [\n   {\n    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n   },\n   {\n    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n   }\n  ],\n  \"zakelijkGerechtigden\": [\n   {\n    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n   },\n   {\n    \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n   }\n  ]\n }\n}",
                             "cookie": [],
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "ccb2dcde-0779-411e-9839-9cc74a0203a4",
+                            "id": "b7ca58ca-da51-4465-a069-22fd89c07e14",
                             "name": "Bad Request",
                             "originalRequest": {
                                 "url": {
@@ -1345,6 +1605,16 @@
                                         }
                                     ]
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -1352,9 +1622,9 @@
                             "code": 400,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -1366,7 +1636,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "445ca498-efee-4f2a-9b19-7eb5bb195ae4",
+                            "id": "21cb823c-e658-4582-ad39-538f8ac70639",
                             "name": "Unauthorized",
                             "originalRequest": {
                                 "url": {
@@ -1390,6 +1660,16 @@
                                         }
                                     ]
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -1397,9 +1677,9 @@
                             "code": 401,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -1411,7 +1691,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "10f4a102-a010-4439-ba30-bab0de0d9135",
+                            "id": "0be0ad5f-54f0-4725-8945-89fc5ae28b23",
                             "name": "Forbidden",
                             "originalRequest": {
                                 "url": {
@@ -1435,6 +1715,16 @@
                                         }
                                     ]
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -1442,9 +1732,9 @@
                             "code": 403,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -1456,7 +1746,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "39db2862-5406-454a-9ae8-69775cf1ef21",
+                            "id": "e17e02a0-4ff3-4f27-83e5-3693c7c5a703",
                             "name": "Not Found",
                             "originalRequest": {
                                 "url": {
@@ -1480,6 +1770,16 @@
                                         }
                                     ]
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -1487,9 +1787,9 @@
                             "code": 404,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -1501,7 +1801,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "0d4a42b2-d055-4a10-ab11-31547c3a8079",
+                            "id": "806b4f84-592b-4098-ade8-16db7f2221fc",
                             "name": "Not Acceptable",
                             "originalRequest": {
                                 "url": {
@@ -1525,6 +1825,16 @@
                                         }
                                     ]
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -1532,9 +1842,9 @@
                             "code": 406,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -1546,7 +1856,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "831d719f-d74a-48fe-8a45-b3193fc2e75d",
+                            "id": "ffd684eb-383d-4ed4-a429-1fc1800afb0d",
                             "name": "Gone",
                             "originalRequest": {
                                 "url": {
@@ -1570,6 +1880,16 @@
                                         }
                                     ]
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -1577,9 +1897,9 @@
                             "code": 410,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -1591,7 +1911,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "f70fdc37-8c38-4e74-b335-cf07dd9af5b9",
+                            "id": "1b0cc422-23ab-4d7f-8eb1-95aa41ecbd37",
                             "name": "Internal Server Error",
                             "originalRequest": {
                                 "url": {
@@ -1615,6 +1935,16 @@
                                         }
                                     ]
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -1622,9 +1952,9 @@
                             "code": 500,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -1636,7 +1966,7 @@
                             "_postman_previewlanguage": "json"
                         },
                         {
-                            "id": "6877728a-711f-48be-b47a-7714e5edce68",
+                            "id": "3a3f5794-36fd-445e-98f8-ae8853cf9724",
                             "name": "Service Unavailable",
                             "originalRequest": {
                                 "url": {
@@ -1660,6 +1990,16 @@
                                         }
                                     ]
                                 },
+                                "header": [
+                                    {
+                                        "description": {
+                                            "content": "Added as a part of security scheme: apikey",
+                                            "type": "text/plain"
+                                        },
+                                        "key": "X-Api-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
                                 "method": "GET",
                                 "body": {}
                             },
@@ -1667,9 +2007,9 @@
                             "code": 503,
                             "header": [
                                 {
+                                    "description": "",
                                     "key": "api-version",
-                                    "value": "1.0.0",
-                                    "description": ""
+                                    "value": "1.0.0"
                                 },
                                 {
                                     "key": "Content-Type",
@@ -1696,10 +2036,24 @@
         }
     ],
     "auth": {
-        "type": "noauth"
+        "type": "apikey",
+        "apikey": [
+            {
+                "key": "key",
+                "value": "X-Api-Key"
+            },
+            {
+                "key": "value",
+                "value": true
+            },
+            {
+                "key": "in",
+                "value": "header"
+            }
+        ]
     },
     "info": {
-        "_postman_id": "477778d3-19a0-44ff-9b1f-1321e0d936f8",
+        "_postman_id": "6fa47ca8-f357-4ada-887b-ecf11d75fd5c",
         "name": "Kadaster - BRK-Kadasterpersonen-Bevragen API",
         "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
         "description": {
